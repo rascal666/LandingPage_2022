@@ -97,7 +97,7 @@
 	font-size: 18px;
 	.list__li {
 		position: relative;
-		padding-left: 50px;
+		padding-left: 30px;
 		display: grid;
 		align-content: center;
 		min-height: 30px;
@@ -112,10 +112,10 @@
 	.list__li::before {
 		content: '';
 		position: absolute;
-		width: 30px;
+		width: 20px;
 		left: 0;
-		height: 30px;
-		background: url('https://www.pulscen.ru/system/ckeditor_assets/pictures/298123/content_subtract.png') no-repeat 100% 100% / cover;
+		height: 20px;
+		background: url('https://www.pulscen.ru/system/ckeditor_assets/pictures/292008/content_vector_d120.png') no-repeat 100% 100% / 20px;
 		top: 50%;
 		transform: translate(0, -50%);
 	}
