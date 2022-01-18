@@ -5,11 +5,15 @@
 
 .futer_main {
   max-width: 1920px;
-  background: #1D4262;
+      background: linear-gradient(
+85.07deg, #1e15da -61.57%, #05b3fa 108.77%);
   color: #fff;
   letter-spacing: 0.04em;
   margin: auto;
   font-family: "Montserrat",sans-serif;
+	width: 92%;
+margin-top: 60px;
+border-radius:3px;
 }
 
 .futer_wrapper {
@@ -125,4 +129,7 @@
   .futer_wrapper {
     padding: 50px 0 50px;
   }
+  .futer_main {
+margin-top: 20px;
+}
 }

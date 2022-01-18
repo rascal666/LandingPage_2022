@@ -99,33 +99,34 @@ html(lang="ru")
 								p Больше не нужно выбирать инструмент для каждого типа продвижения. Комплекс СМАРТпоиск объединил проверенные годами технологии и новейшие разработки Яндекса = максимальная эффективность рекламной кампании.
 								p Что нужно для запуска СМАРТпоиска? Просто обратитесь к своему менеджеру Пульса цен, он (она) всё подробно объяснит и подключит вам специалиста для настройки рекламной кампании «Под ключ».
 							+button("{crm_analytics:click_link(Заказать консультацию по СМАРТпоиску,#order,want_orders,МР_СмартПоиск_Консультация)}", "Заказать консультацию по СМАРТпоиску", "section-buttonAccent")
-				.footer 
-					.content
-						.footer__wrapper 
-							.footer__item-left
-								p.footer__item-left__text Подключить услугу «Дилер — Дистрибьютор» и задать вопросы вы можете по тел. <span classphone-js>8 800 100 91 91 </span>   или заказав обратный звонок.
-								+button("{crm_analytics:click_link(Заказать консультацию специалиста,#order,want_orders,МР_СмартПоиск_Консультация)}", "Заказать консультацию специалиста", "section-buttonAccent")
-							.footer__item-right
-								.contact
-									.contact__by
-									.contact__main.col_cintact_futer
-										.massenger_futer
-											img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/187673/content_ph.png")
-											a(href="tel:88001009191").numder_futer.phone-js +7 (800) 234 43-10
-										.note_futer - бесплатно на территории 
-											span.phoneNote-js РФ
-									.contact__main.col_cintact_futer
-										.massenger_futer
-											img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/187672/content_mes.png")
-											a(href="tel:79292690013").numder_futer +7 929 269 00 13
-										.note_futer - WhatsApp или Viber
-									+button(cell, "Позвоните мне", "section-buttonFooter" )
-								.agreement
-									a(href="https://ekb.pulscen.ru/about/terms")
-										p.text_futter Пользовательское соглашение
-									a(href="https://ekb.pulscen.ru/about/privacy")
-										p.text_futter Политика конфиденциальности				
-				.block_gey
+				include modules/footer.pug
+				//- .footer 
+				//- 	.content
+				//- 		.footer__wrapper 
+				//- 			.footer__item-left
+				//- 				p.footer__item-left__text Подключить услугу «Дилер — Дистрибьютор» и задать вопросы вы можете по тел. <span classphone-js>8 800 100 91 91 </span>   или заказав обратный звонок.
+				//- 				+button("{crm_analytics:click_link(Заказать консультацию специалиста,#order,want_orders,МР_СмартПоиск_Консультация)}", "Заказать консультацию специалиста", "section-buttonAccent")
+				//- 			.footer__item-right
+				//- 				.contact
+				//- 					.contact__by
+				//- 					.contact__main.col_cintact_futer
+				//- 						.massenger_futer
+				//- 							img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/187673/content_ph.png")
+				//- 							a(href="tel:88001009191").numder_futer.phone-js +7 (800) 234 43-10
+				//- 						.note_futer - бесплатно на территории 
+				//- 							span.phoneNote-js РФ
+				//- 					.contact__main.col_cintact_futer
+				//- 						.massenger_futer
+				//- 							img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/187672/content_mes.png")
+				//- 							a(href="tel:79292690013").numder_futer +7 929 269 00 13
+				//- 						.note_futer - WhatsApp или Viber
+				//- 					+button(cell, "Позвоните мне", "section-buttonFooter" )
+				//- 				.agreement
+				//- 					a(href="https://ekb.pulscen.ru/about/terms")
+				//- 						p.text_futter Пользовательское соглашение
+				//- 					a(href="https://ekb.pulscen.ru/about/privacy")
+				//- 						p.text_futter Политика конфиденциальности				
+				//- .block_gey
 								
 										
 
