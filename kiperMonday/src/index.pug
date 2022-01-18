@@ -1,0 +1,38 @@
+<!-- @format -->
+include ./miksins.pug
+
+
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+		title= "оставить товары"
+	body.js-body
+		.main_content
+			header
+				img.neonLenta(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/299068/content_neonovaya_lenta_verhnyaya.png", alt="")
+				include ./modules/toolbar.pug
+				.header
+					.content
+						img.header__headingImg(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/299063/content_kiberponedelnik.png", alt="")
+						.header__wrapper
+							.header__img
+								img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/299064/content_30.png")
+								p.section_h2 на тариф «Старт»
+							.header__text
+								.header__heading.section_h3 Набор эффективных инструментов </br> для быстрого старта интернет-продаж.
+								.list 
+									.list__heading Тариф включает:
+									.list__li Продающий сайт, грамотно настроенный и работает сразу
+									.list__li Размещение до 7000 товаров в каталоге Пульса цен
+									.list__li Помощь в загрузке и оформлении товаров от персонального контент-менеджера
+									.list__li Адаптация сайта под мобильные устройства, поскольку многие покупают со смартфона
+									.list__li Доступ к базе готовых заявок «Закупки»
+									.list__li Только целевая аудитория, которой интересны ваши товары
+				.end
+					.content 
+						p Экономьте 30% бюджета на продвижение товаров и начните новый год с прибыли!
+						+button("{crm_analytics:click_link(Забронировать кибер-скидку,#order,network_actions,НК_Киберпонедельник_Заявка_curData)}", "Забронировать кибер-скидку", "section-buttonAccent")
+						p.end__note Внимание! Предложение действительно до 31 января на все тарифы «Старт», кроме «Старт.Платина+».
+		include ./modules/footer.pug
+	p {crm_analytics:show_page(network_actions,НК_Киберпонедельник_curData)}
