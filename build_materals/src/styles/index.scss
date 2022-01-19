@@ -1,0 +1,207 @@
+/** @format */
+
+//как использовать - main_content{@include mainContent}
+.main_content {
+	@include mainContent(16px, $main_text_color);
+	background: url('https://www.pulscen.ru/system/ckeditor_assets/pictures/299149/content_fon.png') no-repeat 0% 0% / cover, #f8f9fa;
+	font-weight: 500;
+	height: auto;
+}
+
+* {
+	scroll-behavior: smooth;
+}
+
+.header {
+	padding: var(--section) 0;
+	.section-buttonAccent {
+		margin-top: 24px;
+	}
+}
+.accent {
+	color: $corporate_color;
+}
+.fat {
+	font-weight: 700;
+}
+.hiddenText {
+	display: grid !important;
+	transition: 0.5s ease;
+	transition-duration: 0.5s ease;
+	height: 100%;
+	animation: anim 0.5s ease;
+}
+@keyframes anim {
+	0% {
+		opacity: 0;
+		height: 0;
+	}
+	100% {
+		opacity: 1;
+		height: 100%;
+	}
+}
+.header__wrapper {
+	@include grid(2vw, 1fr 1.5fr);
+	margin-top: 30px;
+	.header__case {
+		background: #004c8210;
+		border-radius: 8px;
+		padding: calc(var(--block) - 10px) var(--block);
+		.case__subtitle {
+			margin-top: calc(var(--block) - 10px);
+		}
+	}
+	.header__infoCase {
+		.infoCase__blue-block {
+			background: $corporate_color;
+			border-radius: 8px;
+			padding: calc(var(--block) - 10px);
+			color: white;
+			font-weight: 600;
+		}
+		.infoCase__data {
+			margin-top: var(--block);
+			@include grid(var(--block), 1fr 1.7fr);
+			.data__list {
+				margin-top: 20px;
+				font-weight: 400;
+				margin-bottom: var(--block);
+				max-width: 520px;
+				grid-gap: 8px;
+				display: grid;
+				.data__list-hidden {
+					display: none;
+					grid-gap: 8px;
+				}
+				.data__list-item {
+					display: grid;
+					grid-template-columns: 1fr auto;
+					grid-gap: 8px;
+				}
+				.data__list-button {
+					color: #78869b;
+					display: grid;
+					grid-auto-flow: column;
+					align-items: center;
+					justify-content: left;
+					grid-gap: 8px;
+					margin-top: 20px;
+					cursor: pointer;
+					transition: 0.5s ease;
+					transition-duration: 0.5s ease;
+					height: 0;
+					animation: anim 0.5s ease;
+					font-style: italic;
+				}
+			}
+		}
+	}
+
+	.header__img {
+		position: relative;
+		right: -4vw;
+		img {
+			max-width: 100%;
+		}
+	}
+	.mobile__img {
+		display: none;
+	}
+}
+.header__end {
+	margin-top: var(--block);
+	max-width: 900px;
+}
+.offer {
+	margin-top: 20px;
+	margin-bottom: var(--block);
+	max-width: 520px;
+	grid-gap: 8px;
+	display: grid;
+	.offer__item {
+		display: grid;
+		grid-template-columns: 0.12fr 1fr;
+		grid-gap: 8px;
+	}
+}
+.modal-closeButt {
+	position: relative;
+}
+
+.line {
+	margin: 0px 0 0px;
+	background: #e7eef4;
+	max-width: 100%;
+	width: 100%;
+	height: 2px;
+}
+.line-note {
+	font-weight: 700;
+	display: grid;
+	display: flex;
+	backface-visibility: hidden;
+	transform: rotateX(180deg);
+}
+
+@media (min-width: 1920px) {
+}
+
+@media (max-width: 1600px) {
+	.main_content {
+		background: url(https://www.pulscen.ru/system/ckeditor_assets/pictures/299149/content_fon.png) no-repeat 32% 0%/1940px, #f8f9fa;
+	}
+}
+
+@media (max-width: 1440px) {
+	.main_content {
+		height: auto !important;
+	}
+}
+
+@media (max-width: 1366px) {
+	:root {
+		--section: 40px;
+		--block: 24px;
+	}
+	.toolbar-rascal {
+		padding-top: 24px;
+	}
+	.section_h2 {
+		font-size: 27px;
+	}
+}
+
+@media (max-width: 1024px) {
+	.header__wrapper {
+		grid-template-columns: 1fr;
+		justify-items: center;
+		.header__img {
+			display: none;
+			justify-items: center;
+			img {
+				max-width: 40%;
+			}
+		}
+		.mobile__img {
+			display: block;
+			max-width: 43%;
+			margin: auto;
+		}
+	}
+	.offer {
+		display: grid;
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 800px) {
+	.header__wrapper .header__infoCase .infoCase__data {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media (max-width: 660px) {
+}
+@media (max-width: 480px) {
+}

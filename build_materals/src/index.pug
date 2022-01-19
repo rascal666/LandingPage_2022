@@ -1,0 +1,101 @@
+<!-- @format -->
+include ./miksins.pug
+
+
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+		title= "оставить товары"
+	body.js-body
+		.main_content
+			header
+				include ./modules/toolbar.pug
+				.header
+					.content
+						.header__heading.section_h2(onclick="countRabbits()") Рост спроса на строительные материалы
+						.header__wrapper
+							.header__case.case
+								.case__heading.section_h3 Кейс клиента Пульс цен
+								.case__subtitle Компания ДИОНИКС, г. Новосибирск </br> Поставки сырья для производства ЛКМ, сухих строительных смесей, пластмасс, абразивных и прочих материалов.
+								.offer
+									p.fat За 2021 год:
+									.offer__item 	
+										| #[span.accent.fat 31 347 ] 
+										| #[span просмотров товаров посетителей ] 
+									.offer__item 	
+										| #[span.accent.fat 17 093 ] 
+										| #[span посетителей сайта ] 
+									.offer__item 	
+										| #[span.accent.fat 534 ] 
+										| #[span заказа на общую сумму 2,6 млн. рублей ] 
+								+buttonEvent("{crm_analytics:click_link(Смотреть кейс полностью,#order,network_actions,НК_Стройка_Кейс_curData)}", "Смотреть кейс полностью", "section-button", "button1", "popup1")
+							.header__infoCase.infoCase
+								.infoCase__blue-block За 2021 год компании на Пульсе цен получили 73 556 заказов на строительные материалы и сопутствующие товары.
+								.infoCase__data.data
+									.data__wrapper 
+										.data__header #[span.fat Что покупают ] (топ товаров)
+										.data__list 
+											.data__list-item Штукатурка гипсовая
+											.data__list-item Плиты перекрытия
+											.data__list-item Профнастил для крыши
+											.data__list-item Профнастил для забора
+											.data__list-item ДСП, фанера
+											.data__list-item Цемент белый
+											.data__list-item Доска обрезная
+											.data__list-item Сэндвич панели
+											.data__list-item Шифер волновой
+											.data__list-item Бетон
+											.data__list-hidden
+												.data__list-item Поликарбонат
+												.data__list-item Тротуарная плитка
+												.data__list-item Трехкамерные окна
+												.data__list-item Двухкамерные окна
+												.data__list-item Монолитный поликарбонат
+												.data__list-item Сайдинг для наружной отделки
+												.data__list-item Профильная труба
+												.data__list-item Арматура
+												.data__list-item Брус
+												.data__list-item Кирпич
+												.data__list-item Алюминиевый лист
+												.data__list-item Оргстекло
+											.data__list-button 
+												p.data__list-buttonText развернуть
+												img.data__list-buttonIcon(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/299131/content_vector_460.png", alt="")
+
+									.data__wrapper 
+										.data__header #[span.fat Где покупают ] ( посетители рубрик каталога)
+										.data__list 
+											.data__list-item 	
+												| #[span Строительные материалы ] 
+												| #[span.accent.fat 6 715 434 ] 
+											.data__list-item 	
+												| #[span Отделочные материалы ] 
+												| #[span.accent.fat 1 685 945 ] 		
+											.data__list-item 	
+												| #[span Кондиционирование, вентиляция ] 
+												| #[span.accent.fat 833 209 ] 
+											.data__list-item 
+												| #[span Оборудование для строительства ] 
+												| #[span.accent.fat 846 461 ] 
+											.data__list-item 	
+												| #[span Трубопроводная арматура ] 
+												| #[span.accent.fat 666 850 ] 
+											.data__list-item
+												| #[span Строительные услуги ] 
+												| #[span.accent.fat 487 912 ] 
+											.data__list-item 	
+												| #[span Сантехника ] 
+												| #[span.accent.fat 121 733 ] 
+											.data__list-item 	
+												| #[span Водоснабжение, канализация ] 
+												| #[span.accent.fat 227 154 ] 
+											.data__list-item 	
+												| #[span Бассейны, фонтаны, сауны ] 
+												| #[span.accent.fat 86 010 ] 
+						.header__end До конца января на подключение платного размещения действуют особенно выгодные условия. Чтобы вы успели подготовиться к строительному сезону и получить больше заказов.
+						+button("{crm_analytics:click_link(Заказать консультацию ,#order,network_actions,НК_Стройка_Консультация_curData)}", "Заказать консультацию ", "section-buttonAccent", "button1", "popup1")
+											
+			include ./modules/footer.pug
+			include ./modules/popap.pug
+	p {crm_analytics:show_page(network_actions,НК_Стройка_curData)}

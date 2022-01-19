@@ -1,0 +1,147 @@
+/** @format */
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.button:hover {
+	cursor: pointer;
+}
+
+.modal-block {
+	width: 100%;
+	padding: 80px 5%;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	transform: translate(0%, 0%);
+	background:  #F8F9FA;
+	border-radius: 5px;
+	    height: auto;
+}
+
+.modal-block-height {
+	top: 0%;
+	transform: translate(0%, 0%);
+	height: auto;
+	overflow: inherit;
+}
+
+.modal-close {
+	    position: fixed;
+    right: 3%;
+    top: 4%;
+    width: 15px;
+    height: 15px;
+    z-index: 5;
+	display: none;
+}
+.modal-close:hover {
+	filter: contrast(0.1);
+}
+
+.modal-close:hover {
+	cursor: pointer;
+}
+
+.modal-wrapper-block {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: #bfe6ff24;
+	display: none;
+	backdrop-filter: blur(1px);
+	z-index: 4;
+	transition-duration: 0.5s;
+	transition-delay: 0.5s;
+	overflow: scroll;
+	
+}
+
+.modal-block-show {
+	display: block;
+	animation: anim 0.5s ease;
+}
+
+.popap_infoCompany{
+	margin-top: 10px;
+}
+.heading_blue{
+	background: #0086e515;
+border-radius: 30px;
+color: #0085E5;
+padding: 10px var(--block);
+width: fit-content;
+font-weight: 700;
+}
+
+.block_task{
+	background: #FFFFFF;
+box-shadow: 0px 3.54384px 124.034px rgba(31, 131, 185, 0.07);
+border-radius: 20px;
+padding: var(--block);
+margin-top: calc(var(--section));
+
+}
+.task__item{
+	margin-top: var(--block);
+}
+.block_end{
+	margin-top: calc(var(--section) - 20px) ;
+}
+.end__offer{
+	margin: var(--block) 0;
+	display: grid;
+	grid-gap: 16px;
+	max-width: 800px;
+}
+
+.result__subtitle{
+	margin-top: var(--block);
+}
+.result{
+	display: grid;
+	grid-template-columns: 1.2fr 1fr;
+	grid-gap: 4vw;
+}
+.result_graphic{
+max-width: 100%;
+}
+
+.result__offer{
+	margin: 10px 0 20px;
+}
+.result__note{
+	    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 24px;
+}
+.result__noteItem{
+	   display: grid;
+    grid-template-columns: auto 1fr;
+    grid-gap: 8px;
+    align-items: center
+}
+
+
+@keyframes anim {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 100%;
+	}
+}
+
+@media (max-width:900px){
+	.result {
+    grid-template-columns: 1fr;
+}
+}
+
