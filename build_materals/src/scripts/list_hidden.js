@@ -9,11 +9,11 @@ button.addEventListener('click', () => {
     if (listHidden.classList.contains('hiddenText') == true) {
         buttonText.innerHTML = 'свернуть'
         buttonIcon.style.transform = "rotate(180deg)"
-        main_content.style.height = 'auto'
+        // main_content.style.height = 'auto'
     } else {
         buttonText.innerHTML = 'развернуть'
         buttonIcon.style.transform = "rotate(0deg)"
-        main_content.style.height = '100vh'
+        // main_content.style.height = '100vh'
     }
     console.log(listHidden);
 })

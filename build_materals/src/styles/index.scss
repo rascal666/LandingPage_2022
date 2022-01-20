@@ -121,7 +121,7 @@
 	display: grid;
 	.offer__item {
 		display: grid;
-		grid-template-columns: 0.12fr 1fr;
+		grid-template-columns: 56px 1fr;
 		grid-gap: 8px;
 	}
 }
@@ -204,4 +204,7 @@
 @media (max-width: 660px) {
 }
 @media (max-width: 480px) {
+	.result__note {
+		grid-template-columns: 1fr;
+	}
 }
