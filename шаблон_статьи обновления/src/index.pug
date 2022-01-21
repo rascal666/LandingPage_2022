@@ -1,0 +1,72 @@
+<!-- @format -->
+include ./miksins.pug
+
+
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+		title= "оставить товары"
+	body.js-body
+		.main_content
+			header
+				include ./modules/toolbar.pug
+				.header
+					.content
+						.header__wrapper
+							.header__text
+								.header__heading.section_h2 Тренды онлайн-продаж в 2022 году
+								img.mobile__img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/299499/content_illyustratsiya.png")
+								.offer.section_h4
+									p За прошедшие два года интернет превратился в основной, а для большинства бизнесов единственный канал продаж. Конкуренция в сфере онлайн-коммерции стремительно растет. Поставщики начали осознаннее относиться к развитию онлайн-магазинов и продвижению в сети. Что дальше?
+
+
+									p Следующие годы необходимо посвятить закрытию новых потребностей пользователей. Персонализация и клиентоориентированность выходят на новый уровень. Мы выделили 6 тенденций, которые повлияют на продажи и останутся надолго. Расскажем, как их использовать для максимизации ваших продаж. Читайте и применяйте.
+									
+							.header__img
+								img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/299499/content_illyustratsiya.png")
+			.infoBlock.white
+				.content 
+					.infoBlock__wrapper.item
+						.item__left.left
+							.left__header 
+								span.left__number 1
+								.left__line 
+							.left__heading.section_h2 Гибкость и мобильность в формировании ассортимента
+							.left__offer 
+								p Стремительное развитие технологий влияет на быстрое изменение спроса. Постоянно выходят более технологичные новинки, только узнав о которых, покупатели тут же ищут их в интернете. Чтобы первым узнавать о новинках и предлагать их клиентам, нужно быть на связи с производителями, которые эти технологии внедряют. 
+								p Это требует от продавцов моментальных решений. Особенно на старте бизнеса. Важно здесь и сейчас оценить ситуацию на рынке, сформировать ассортимент и сразу запустить продажи.
+						.item__right.item__right_blue.right
+							.right__heading.section_h3 Что сделать прямо сейчас
+							.right__subtitle.section_h5 Быстро обновляйте ассортимент и запускайте продажи на торговой площадке с помощью услуги «Дилер — Дистрибьютор»:
+							.list
+								.list__li_circle.section_h5 Добавьте на сайт до 10 000 позиций и начните продавать в тот же день.
+								.list__li_circle.section_h5 Автоматически сверяйте цены и остатки на складе и в интернет-магазине.
+								.list__li_circle.section_h5 Быстро обновляйте ассортимент в зависимости от изменений покупательского спроса.
+								.list__li_circle.section_h5 В числе первых предлагайте покупателям новинки.
+					+button('{crm_analytics:click_link(Подключить,#order,network_actions,НК_статья_подключить_curData)}', 'Подключить', 'section-buttonAccent')
+			.infoBlock.blue
+				.content 
+					.infoBlock__wrapper.item
+						.item__left.left
+							.left__header 
+								span.left__number 2
+								.left__line 
+							.left__heading.section_h2 Гибкость и мобильность в формировании ассортимента
+							.left__offer 
+								p Стремительное развитие технологий влияет на быстрое изменение спроса. Постоянно выходят более технологичные новинки, только узнав о которых, покупатели тут же ищут их в интернете. Чтобы первым узнавать о новинках и предлагать их клиентам, нужно быть на связи с производителями, которые эти технологии внедряют. 
+								p Это требует от продавцов моментальных решений. Особенно на старте бизнеса. Важно здесь и сейчас оценить ситуацию на рынке, сформировать ассортимент и сразу запустить продажи.
+						.item__right.item__right_white.right
+							.right__heading.section_h3 Что сделать прямо сейчас
+							.right__subtitle.section_h5 Быстро обновляйте ассортимент и запускайте продажи на торговой площадке с помощью услуги «Дилер — Дистрибьютор»:
+							.list
+								.list__li_circle.section_h5 Добавьте на сайт до 10 000 позиций и начните продавать в тот же день.
+								.list__li_circle.section_h5 Автоматически сверяйте цены и остатки на складе и в интернет-магазине.
+								.list__li_circle.section_h5 Быстро обновляйте ассортимент в зависимости от изменений покупательского спроса.
+								.list__li_circle.section_h5 В числе первых предлагайте покупателям новинки.
+					+button('{crm_analytics:click_link(Подключить,#order,network_actions,НК_статья_подключить_curData)}', 'Подключить', 'section-buttonAccent')
+							
+
+							
+		include ./modules/footer.pug
+	p {crm_analytics:show_page(network_actions,НК_Оставить_товары_curData)}
