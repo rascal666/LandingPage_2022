@@ -9,15 +9,92 @@
 * {
 	scroll-behavior: smooth;
 }
-header {
-	background: linear-gradient(235.3deg, #ff00a8 -77.79%, #0258d8 104.58%) no-repeat 100% 100% / cover;
+.imgDecor {
+	position: absolute;
+	z-index: 2;
+	left: 0;
+	left: 0;
 }
+.imgDecor__bottom {
+	bottom: 0;
+}
+.imgDecor__center {
+	bottom: -356px;
+}
+.imgDecor__centerCenter {
+	left: 50% !important;
+	transform: translateX(-50%);
+	bottom: -356px;
+}
+header {
+	background: url('https://www.pulscen.ru/system/ckeditor_assets/pictures/299902/content_fonovye_effekty.png') no-repeat 100% 100% / cover, linear-gradient(235.3deg, #ff00a8 -77.79%, #0258d8 104.58%) no-repeat 100% 100% / cover;
+	position: relative;
+	.header__decor {
+		position: absolute;
+		bottom: -90px;
+		z-index: 2;
+	}
+}
+
 .header__wrapper {
 	@include grid(2vw, 1.2fr 1fr);
 	margin-top: 30px;
 	align-items: center;
 	padding-bottom: var(--section);
+
 	.header__text {
+		.header__notes {
+			margin-top: 20px;
+			.notes__offer {
+				position: relative;
+			}
+			.notes__offer p {
+				min-height: 30px;
+				display: grid;
+				align-content: center;
+			}
+			.notes__offer a {
+				min-height: 30px;
+				display: grid;
+				align-content: center;
+			}
+			.notes__offer p:hover {
+				cursor: pointer;
+				padding-left: 40px;
+				margin-left: -40px;
+				text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
+				font-weight: 700;
+			}
+			.notes__offer a:hover {
+				cursor: pointer;
+				padding-left: 40px;
+				margin-left: -40px;
+				text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
+				font-weight: 700;
+			}
+
+			.notes__heading:hover {
+				background: url('https://www.pulscen.ru/system/ckeditor_assets/pictures/299928/content_ikonka_pri_vsplyvanii.png') no-repeat 0% 0% / 30px;
+			}
+			.notes__srm:hover {
+				background: url('https://www.pulscen.ru/system/ckeditor_assets/pictures/300107/content_group_1193.png') no-repeat 0% 0% / 30px;
+			}
+			.notes__virtual:hover {
+				background: url('https://www.pulscen.ru/system/ckeditor_assets/pictures/300104/content_group_1192.png') no-repeat 0% 0% / 30px;
+			}
+			.notes__reklama:hover {
+				background: url('https://www.pulscen.ru/system/ckeditor_assets/pictures/300109/content_group_1196.png') no-repeat 0% 0% / 30px;
+			}
+			.notes__voice:hover {
+				background: url('https://www.pulscen.ru/system/ckeditor_assets/pictures/300108/content_group_1194.png') no-repeat 0% 0% / 30px;
+			}
+			.notes__buy:hover {
+				background: url('https://www.pulscen.ru/system/ckeditor_assets/pictures/300106/content_group_1191.png') no-repeat 0% 0% / 30px;
+			}
+			.notes__img {
+				margin-top: -20px;
+			}
+		}
 	}
 	.header__img {
 		position: relative;
@@ -32,6 +109,7 @@ header {
 }
 .offer {
 	margin-top: 30px;
+	margin-bottom: var(--block);
 	max-width: 720px;
 	grid-gap: 16px;
 	display: grid;
@@ -46,6 +124,16 @@ header {
 .infoBlock {
 	color: $main_text_color;
 	padding: 11vw 0;
+	position: relative;
+	.infoBlock__imgTrend {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		margin-left: 70%;
+		img {
+			max-width: 100%;
+		}
+	}
 
 	.infoBlock__wrapper {
 		@include grid(2vw, 1fr 1fr);
@@ -55,16 +143,24 @@ header {
 	.item__left {
 		position: relative;
 		top: -18px;
-
+		max-width: 670px;
+		.list {
+			font-size: 16px;
+			line-height: 20px;
+		}
 		.left__header {
 			color: $corporate_color;
 			font-weight: 700;
+			@include grid(var(--block), 80px 1fr);
+			align-items: end;
+			margin-top: -58px;
 			.left__number {
 				font-size: 18px;
 			}
 			.left__line {
 				margin: 0px 0 0px;
 				background: $corporate_color;
+				opacity: 0.3;
 				max-width: 100%;
 				width: 100%;
 				height: 2px;
@@ -78,6 +174,10 @@ header {
 			display: grid;
 			grid-gap: 1.5vw;
 			line-height: 24px;
+		}
+		.left__note {
+			margin-top: var(--block);
+			opacity: 0.6;
 		}
 	}
 	.item__right_white {
@@ -96,6 +196,11 @@ header {
 		.right__subtitle {
 			margin-top: 20px;
 		}
+		.right__offer {
+			display: grid;
+			grid-gap: 16px;
+			margin-top: 16px;
+		}
 	}
 }
 
@@ -110,10 +215,22 @@ header {
 	}
 }
 
+@media (max-width: 1900px) {
+	.imgDecor {
+		position: absolute;
+		z-index: 2;
+		left: 0;
+		left: -190px;
+	}
+}
+
 @media (max-width: 1440px) {
 }
 
-@media (max-width: 1366px) {
+@media (max-width: 1240px) {
+	.imgDecor {
+		display: none;
+	}
 }
 
 @media (max-width: 1024px) {
@@ -122,6 +239,7 @@ header {
 		--block: 24px;
 		--block60: 32px;
 	}
+
 	.header__wrapper {
 		grid-template-columns: 1fr;
 		justify-items: center;
@@ -151,10 +269,26 @@ header {
 		.infoBlock__wrapper {
 			grid-template-columns: 1fr;
 		}
+		.infoBlock__imgTrend {
+			display: none;
+		}
 	}
 }
 
 @media (max-width: 800px) {
+	.header__wrapper {
+		.header__text {
+			.header__notes {
+				.notes__offer a:hover {
+					cursor: pointer;
+					background: none;
+				}
+			}
+		}
+	}
+	.infoBlock .item__left .left__header {
+		margin-top: 0px;
+	}
 }
 
 @media (max-width: 660px) {
