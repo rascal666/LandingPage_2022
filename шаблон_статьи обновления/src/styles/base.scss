@@ -6,11 +6,19 @@
 
 .content {
 	@include content(0px 0 0px);
+	z-index: 3;
+	position: relative;
 }
 
 .section-btns {
 	@include grid(60px, auto auto);
 	justify-content: left;
+}
+.section_link {
+	color: $accentColor !important;
+	border-bottom: 1px solid $accentColor;
+	width: fit-content;
+	cursor: pointer;
 }
 
 // кнопки для ссылки
