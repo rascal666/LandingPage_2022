@@ -1,0 +1,130 @@
+/** @format */
+
+//как использовать - main_content{@include mainContent}
+.main_content {
+	@include mainContent(16px, $main_text_color);
+	background: white;
+}
+
+* {
+	scroll-behavior: smooth;
+}
+
+.accent {
+	color: $accentF;
+}
+
+.header__wrapper {
+	@include grid(2vw, 1.8fr 1fr);
+	margin-top: 30px;
+	position: relative;
+	.header__img {
+		position: absolute;
+		max-width: 600px;
+		right: 0;
+		top: 0;
+		img {
+			max-width: 100%;
+		}
+	}
+	.mobile__img {
+		display: none;
+	}
+}
+.offer {
+	margin-top: var(--block);
+	@include grid(var(--block), 50px 1fr);
+	max-width: 520px;
+	align-items: baseline;
+	.offer__line {
+		margin: 0px 0 0px;
+		background: $accentF;
+		max-width: 100%;
+		width: 100%;
+		height: 2px;
+	}
+}
+
+.line-note {
+	font-weight: 700;
+	display: grid;
+	display: flex;
+	backface-visibility: hidden;
+	transform: rotateX(180deg);
+}
+
+.benefits {
+	margin-top: var(--section);
+	margin-bottom: var(--section);
+	.benefits__block {
+		@include grid(var(--block), repeat(auto-fit, minmax(250px, 1fr)));
+		max-width: 800px;
+		margin-top: var(--block);
+		margin-bottom: calc(var(--section) - 20px);
+	}
+	.block__item {
+		@include grid(20px, 40px 1fr);
+		img {
+			max-width: 40px;
+			max-height: 40px;
+		}
+	}
+}
+.fat {
+	font-weight: 700;
+}
+@media (max-width: 1920px) {
+}
+
+@media (max-width: 1440px) {
+	.header__wrapper .header__img {
+		max-width: 500px;
+	}
+}
+
+@media (max-width: 1366px) {
+	.header__wrapper .header__img {
+		max-width: 380px;
+	}
+}
+
+@media (max-width: 1024px) {
+	:root {
+		--section: 40px;
+		--block: 24px;
+	}
+	.header__wrapper {
+		grid-template-columns: 1fr;
+		justify-items: center;
+		.header__text {
+			order: 2;
+		}
+		.header__img {
+			display: none;
+			justify-items: center;
+			img {
+				max-width: 40%;
+			}
+		}
+		.mobile__img {
+			display: block;
+			max-width: 43%;
+			margin: auto;
+		}
+	}
+	.offer {
+		display: grid;
+		max-width: 100%;
+	}
+	.header__heading {
+		margin-bottom: 24px;
+	}
+}
+
+@media (max-width: 800px) {
+}
+
+@media (max-width: 660px) {
+}
+@media (max-width: 480px) {
+}

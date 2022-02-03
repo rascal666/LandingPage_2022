@@ -1,0 +1,43 @@
+<!-- @format -->
+include ./miksins.pug
+
+
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+		title= "оставить товары"
+	body.js-body
+		.main_content
+			header
+				include ./modules/toolbar.pug
+				.header
+					.content
+						.header__wrapper
+							.header__text
+								.header__heading.section_h1 2 МЕСЯЦА ТАРИФА <br/> #[span.accent «ПЛАТИНА» ] В ПОДАРОК!
+								img.mobile__img.illustr__head(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/302103/content_frame_4.png")
+								.offer
+									.offer__line
+									p При подключении любого тарифа вы получаете подарок — 2 месяца размещения на одном из самых эффективных пакетов «Платина». 
+									
+							.header__img
+								img.illustr__head(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/302103/content_frame_4.png")
+						.benefits
+							.benefits__title.fat Выгоды:
+							.benefits__block 
+								.block__item
+									img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/301314/content_subtract.png", alt="")
+									p возможность протестировать более дорогой тариф без переплаты;
+								.block__item
+									img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/301315/content_group_1194.png", alt="")
+									p усиление продаж и привлечение новых клиентов;
+								.block__item
+									img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/301312/content_frame_5.png", alt="")
+									p увеличение трафика тогда, когда это особенно важно;
+								.block__item
+									img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/301313/content_frame_8.png", alt="")
+									p возможность изучить спрос в другом городе и наладить продажи.
+							+button('{crm_analytics:click_link(Забронировать подарок,#order,network_actions,НК_РФ_2мес.Звезда_Заявка_curData)}', 'Забронировать подарок', 'section-buttonAccent')
+		include ./modules/footer.pug
+	p {crm_analytics:show_page(network_actions,НК_РФ_2мес.Звезда_curData)}
