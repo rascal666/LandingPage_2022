@@ -1,0 +1,138 @@
+<!-- @format -->
+include ./miksins.pug
+
+
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+		title= "оставить товары"
+	body.js-body
+		.main_content
+			header
+				include ./modules/toolbar.pug
+				.header
+					.content
+						.header__wrapper
+							div
+								picture
+									source(media='(min-width: 1024px)' srcset='https://www.pulscen.ru/system/ckeditor_assets/pictures/302337/content_rectangle_136.png')
+									source(media='(max-width: 1024px)' srcset='https://www.pulscen.ru/system/ckeditor_assets/pictures/302403/content_rectangle_136.png')
+									img.wow.slideInDown.header__wrapperBg(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/302337/content_rectangle_136.png' data-wow-duration="0.5s")
+								.header__text.text
+									img.text__bg(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/302346/content_rectangle_139.png", alt="")
+									.header__heading.section_h2.wow.slideInLeft(data-wow-duration="1s" ) Идеальная реклама в Яндексе:  #[span.accent смарт-баннер ]
+									.offer
+										p Что это такое, какие задачи решает и какие результаты приносит.
+								+buttonLink('Смотреть кейсы','Смотреть кейсы', 'section-buttonAccent', '#cases')
+							.header__descriptions.descriptions
+								picture
+									source(media='(min-width: 1024px)' srcset='https://www.pulscen.ru/system/ckeditor_assets/pictures/302338/content_rectangle136.png')
+									source(media='(min-width: 600px)' srcset='https://www.pulscen.ru/system/ckeditor_assets/pictures/302408/content_rectangle_136.png')
+									source(media='(max-width: 600px)' srcset='https://www.pulscen.ru/system/ckeditor_assets/pictures/302407/content_rectangle_136.png')
+									img.descriptions__bg(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/302338/content_rectangle136.png')
+								.descriptions__title.section_h3 Краткое описание
+								.descriptions__note Смарт-баннер — это один из рекламных инструментов Яндекса. Его формат уникален для каждого пользователя, т.к. формируется согласно интересам человека. Не секрет, что Яндекс собирает информацию о наших покупках, запросах и просматриваемом контенте. Поэтому он точно знает, на что «клюнет» покупатель.
+				.benefits
+					.content 
+						.benefits__wrapper
+							.benefits__title_border
+								.benefits__title.section_h3 Преимущества
+							.benefits__line_small
+							.benefits__line
+							.benefits__block.block
+								.block__item.item 
+									.item__border
+										.item__block 5 в 1
+									.item__text В одном баннере можно показать много товаров
+								.block__item.item 
+									.item__line
+									.item__border
+										.item__block.item__block_size1 Автоматизация
+									.item__text Контент обновляется автоматически, поэтому объявление всегда актуально
+								.block__item.item 
+									.item__line
+									.item__border
+										.item__block.item__block_size1 
+											p #[span.accent2 NEW ] </br> Технологии  </br>Яндекс
+									.item__text Новейший инструмент на супер-умных технологиях Яндекса
+								.block__item.item
+									.item__border
+										.item__block.item__block_size1 1000+ </br> площадок
+									.item__text Показывается в РСЯ  на 1000+ популярных сайтах и содержит всю важную информацию о товаре.				
+				.template 
+					.content
+						.template__wrapper 
+							.template_title.section_h3 Смарт-баннер </br> умеет быть разным
+							.template__block
+								.template__carousel.carousel
+									img.carousel__img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/302477/content_group_1226.png", alt="") 
+									.template__header.carousel__title.wow.rollIn(data-wow-duration="0.5s" ) 
+										p Карусель </br> из фотографий
+								div.template__blockSum
+									.template__graphhh.graphhh
+										img.graph__imgR(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/302479/content_group_1231.png", alt="") 
+										.template__header.graph__title.wow.rotateInUpRight(data-wow-duration="0.5s" data-wow-delay="0.8s") 
+											p Текстово-  </br>графический формат
+									.template__brightPicture.brightPicture
+										img.brightPicture__img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/302478/content_group_1237.png", alt="") 
+										.template__header.brightPicture__title.wow.rotateInDownRight(data-wow-duration="0.5s" data-wow-delay="1.6s") 
+											p Яркая  </br>Картинка
+								.template__blockText.blockText
+									picture
+										source(media='(min-width: 1024px)' srcset='https://www.pulscen.ru/system/ckeditor_assets/pictures/302481/content_group_1346.png')
+										source(media='(max-width: 1024px)' srcset='https://www.pulscen.ru/system/ckeditor_assets/pictures/302482/content_group_1347.png')
+										img.lines-dd(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/302481/content_group_1346.png", alt="")
+									img.mobi(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/302643/content_group_1368.png", alt="")
+									.blockText__title
+										p Показывается в #[span.fat РСЯ ] на #[span.accent2.fat 1000+ ]  популярных сайтах и содержит всю важную информацию о товаре.
+				.task
+					.content
+						.task__wrapper
+							.task__title.section_h3 Решает задачи
+							.task__block.block 
+								.block__item.wow.bounceInLeft
+									img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/302526/content_ikonka_1.png", alt="")
+									p Усиление продаж в любой сезон
+								.block__item.wow.bounceInRight
+									img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/302523/content_ikonka_3.png", alt="")
+									p Быстрое привлечение новых клиентов и возврат покупателей
+								.block__item.wow.bounceInLeft
+									img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/302524/content_ikonka_2.png", alt="")
+									p Перехват заявок, которые могут уйти к конкурентам
+								.block__item.wow.bounceInRight
+									img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/302522/content_ikonka_4.png", alt="")
+									p Увеличение трафика на ваши товары
+				.cases#cases 
+					.content 
+						.cases__wrapper
+							.cases__block.block 
+								.block__item
+									.item__title.section_h4 Кейс компании ООО «ГрандСтрой»
+									.item__subtitle Продажа и доставка сыпучих материалов в Екатеринбурге и Свердловской области.
+									.item__result 
+										.result__heading.fat За 6  месяцев:
+										.result__offer 
+											p #[span.accent.fat +137%] посетителей сайта
+											p #[span.accent.fat +135%] просмотров товаров
+									+buttonEvent("{crm_analytics:click_link(Смотреть кейс полностью,#order,network_actions,НК_Стройка_Кейс_curData)}", "Смотреть кейс полностью", "section-buttonAccent", "button1", "popup1")
+								.block__item
+									.item__title.section_h4 Кейс компании «Просто забор», г. Екатеринбург
+									.item__subtitle Панель ограждения, 3D забор, ворота, калитки, мобильное ограждение.
+									.item__result 
+										.result__heading.fat За 4 месяца работы СМАРТ-баннера
+										.result__offer 
+											p #[span.accent.fat +99,6] посетителей сайта
+											p #[span.accent.fat +97,4%] просмотров товаров
+									+buttonEvent("{crm_analytics:click_link(Смотреть кейс полностью,#order,network_actions,НК_Стройка_Кейс_curData)}", "Смотреть кейс полностью", "section-buttonAccent", "button2", "popup2")
+				.end 
+					.content
+						.end__wrapper 
+							.end__title.section_h3 Хотите так же?
+							.end__subtitle Обратитесь к своему менеджеру, он (она) расскажет подробнее о возможностях и условиях подключения смарт-баннера.
+							+button('{crm_analytics:click_link(Заказать консультацию,#cases,network_actions,НК_Оставить_товары_Консультация_curData)}', 'Заказать консультацию', 'section-buttonAccent')
+		include ./modules/grandStroy.pug
+		include ./modules/prostoZabor.pug
+		include ./modules/footer.pug
+	p {crm_analytics:show_page(network_actions,НК_Смарт-Баннер_curData)}
+	
