@@ -27,6 +27,29 @@
 .fat {
 	font-weight: 700;
 }
+.sectionHint {
+	cursor: pointer;
+}
+.sectionHintRel {
+	position: relative;
+	z-index: 2;
+}
+.sectionHint:hover::before {
+	content: 'РСЯ — это рекламная сеть Яндекса. Она включает более 1000 популярных сайтов (РБК, Gismeteo.ru, Одноклассники, Mail.group.ru и др.), на которых будет показываться ваша реклама.';
+	position: absolute;
+	top: 36px;
+	left: -16px;
+	right: 0;
+	background: white;
+	padding: 10px 20px;
+	width: 250px;
+	color: $main_text_color;
+	font-weight: 400;
+	border-radius: 10px;
+	box-shadow: -5px 2px 8px 0px #b6b6b638;
+	z-index: 5;
+	font-size: 14px;
+}
 
 .header__wrapper {
 	@include grid(0vw, 1fr 1fr);
@@ -268,6 +291,9 @@
 		text-align: center;
 	}
 	.task__block {
+		img {
+			max-width: 100px;
+		}
 		@include grid(var(--section), 1fr 1fr);
 		justify-items: baseline;
 
@@ -364,6 +390,7 @@
 	.modal__solution {
 		margin-top: var(--section_h2);
 		.solution__subtitle {
+			position: relative;
 			margin-top: 20px;
 		}
 		.solution__block {
