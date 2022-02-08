@@ -1,0 +1,198 @@
+<!-- @format -->
+include ./miksins.pug
+
+
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+		title= "оставить товары"
+	body.js-body
+		.main_content.mainIndex
+			header
+				include ./modules/toolbar.pug
+				.header
+					.content
+						.header__wrapper
+							.header__text
+								.header__heading.section_h1 Тариф «Бизнес» - лучший друг вашего бизнеса
+								.offer
+									p Что это такое, какие задачи решает и какие результаты приносит. 
+									
+						.tarifInclude 
+							.tarifInclude__title Сила тарифа в его комплектации. Она включает:
+							.tarifInclude__block.block 
+								picture.block__line
+									source(srcset='https://www.pulscen.ru/system/ckeditor_assets/pictures/302838/content_vector_531.png' media='(min-width: 1024px)')
+									source(srcset='https://www.pulscen.ru/system/ckeditor_assets/pictures/302853/content_vector_531.png' media='(min-width: 300px)')
+									img(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/302838/content_vector_531.png' alt='MDN')
+								.block__item.block__item_seo.item
+									img.item__imgSeo(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/302822/content_frame_38.png", alt="")
+									.item_circle.item_circle_seo.wow.rollIn  Сайт, стильный </br> и работает </br> как часы
+									p.item__note SEO-проработка. Индивидуальный дизайн. Правильная архитектура и удобная навигация.
+									
+								.block__item.block__item_region.item 
+									img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/302823/content_group_1323.png", alt="")
+									.item_circle.item_circle_regin.wow.flipInX(data-wow-delay=".5s") Региональное продвижение
+									p.item__note В тариф включены до 4 регионов для выхода на новые рынки без открытия филиалов и складов. Также есть возможность размещать товары на площадках в 214 городах РФ.
+									
+								.block__item.block__item_catalog.item 
+									img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/302824/content_group_1329.png", alt="")
+									p.item__note Загружайте его по-полной, чтобы люди покупали основные и сопутствующие товары у вас.
+									.item_circle.item_circle_seo.wow.flipInY(data-wow-delay="1s") Безлимитный каталог
+								.block__item.block__item_pay.item 
+									img.item__imgPay(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/302825/content_group_1338.png", alt="")
+									p.item__note Онлайн-оплата и калькулятор доставки, чтобы у клиента не было времени передумать: выбрал, оплатил, заказал доставку.
+									.item_circle.item_circle_pay.wow.rotateIn(data-wow-delay="1.5s") Вспомогательные сервисы для сайта
+							.tarifInclude__bts
+								p С тарифом «Бизнес» вы получаете готовый интернет-магазин. Сайт проработан внешне и внутренне (что очень важно), процесс оплаты налажен и подготовлен выход на любой рынок.
+								.bts__block 
+									+buttonLink('{crm_analytics:click_link(Читать дальше,#next,network_actions,НК_Бизнес_Подробнее)}', 'Читать дальше', 'section-button', 'next')
+									+button('{crm_analytics:click_link(Прослушать консультацию,#order,network_actions,НК_Бизнес_Консультаци)}', 'Прослушать консультацию', 'section-button' )
+			.benefits#next
+				.site__sliderDg
+					img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/303235/content_ellipse_163.png", alt="")
+				.content 
+					.benefits__title.section_h3 Чем так хорош «Бизнес»
+					.benefits__subtitle Расскажем о тарифе подробнее.
+					.benefits__subtitle2 Тариф «Бизнес» закрывает 2 основных потребности в интернет-продажах: это сайт и рынок.Расскажем о тарифе подробнее.
+					.benefits__site.site
+						div 
+							.site__circleBg
+								.circleBg
+								.site__title.section_h3 Сайт
+							.site__subtitle Интернет-механизм, который должен быть и красивым и работающим. Это как автомобиль, только потрогать нельзя. Для сайта так же важен и внешний вид и то, что под “капотом”. </br> К примеру:
+							.list 
+								.list__title.fat Кузов сайта:
+								.list__li Индивидуальный дизайн под сферу вашего бизнеса
+								.list__li Оформленный каталог
+								.list__li Оформленные карточки групп товаров
+							.list 
+								.list__title.fat Капот сайта:
+								.list__li SEO-проработка для взаимодействия с поисковиками Яндекс и Google
+								.list__li Навигация для быстрого и удобного поиска товаров и другой информации
+								.list__li Настройка процессов онлайн-оплаты и доставки
+								.list__li Привязка каталога к системе учета (1С, Мой склад)
+							.site__line
+							.site__end.end
+								.end__title.fat Что в итоге?
+								.end__subtitle Покупатель легко находит товар, видит актуальную цену и наличие, оформляет заказ, тут же оплачивает и заказывает доставку (если нужна). Все довольны.
+						div.site__slider
+							// Slider main container
+							.swiper.slider-r
+								// Additional required wrapper
+								p.slider-r__title.fat Примеры сайта на тарифе "Бизнес:
+								.swiper-wrapper
+									// Slides
+									.swiper-slide
+										img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/302826/content_sayt_1.png", alt="")
+									.swiper-slide
+										img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/302827/content_sayt_2.png", alt="")
+									.swiper-slide
+										img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/302828/content_sayt_3.png", alt="")
+									.swiper-slide
+										img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/302829/content_sayt_4.png", alt="")
+								// If we need pagination
+								.swiper-pagination
+								// If we need navigation buttons
+								img.button-prev(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/302831/content_strelka_vlevo.png", alt="")
+								img.button-next(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/302833/content_strelka_vpravo.png", alt="")
+								
+								// If we need scrollbar
+								.swiper-scrollbar
+					.benefits__result.result 
+						.result__title.fat Результат на примере компании:
+						.result__wrapper
+							div 
+								.result__case.case
+									.result__caseGH
+									.result__caseMain 
+										.case__title.section_h4.fat ПромИнвестЭлектро, г. Пермь
+										.case__subtitle В июне 2021 подключили тариф «Бизнес», где уже включено продвижение в дополнительные регионы.
+										.case__title.section_h4.fat География просмотров:
+										.case__block 
+											.block__item 
+												p.item__title до подключения </br> «Бизнеса»
+												.item__number 
+													span.accent 66.7%
+													p Пермь
+												.item__number 
+													span.accent 4,3%
+													p Екатеринбург
+												.item__number 
+													span.accent 2,9%
+													p Челябинск
+												.item__number 
+													span.accent 2,9%
+													p Ростов-на-Дону
+												.item__number 
+													span.accent 2,9%
+													p Москва
+												.item__number 
+													span.accent 1,4%
+													p Тюмень
+												.item__number 
+													span.accent 1,4%
+													p Ставрополь
+												.item__number 
+													span.accent 1,4%
+													p Санкт-Петербург
+												.item__number 
+													span.accent 1,4%
+													p Смоленск
+												.item__number 
+													span.accent 1,4%
+													p Новомосковск
+											.block__item 
+												p.item__title после подключения </br> «Бизнеса»
+												.item__number 
+													span.accent 29,9%
+													p Екатеринбург
+												.item__number 
+													span.accent 24,9%
+													p Пермь
+												.item__number 
+													span.accent 17,3%
+													p Москва
+												.item__number 
+													span.accent 3,6%
+													p Санкт-Петербург
+												.item__number 
+													span.accent 2,5%
+													p Волгоград
+												.item__number 
+													span.accent 1,5%
+													p Сысерть
+												.item__number 
+													span.accent 1,0%
+													p Иркутск
+												.item__number 
+													span.accent 1,0%
+													p Краснодар
+												.item__number 
+													span.accent 1,0%
+													p Ростов-на-Дону
+												.item__number 
+													span.accent 1,0%
+													p Гродно
+							div 
+								.site__circleBg
+									.circleBg
+									.rinok__title.section_h3 Рынок
+									.rinok__subtitle Как освоить новые рынки без физического присутствия в них? В тарифе «Бизнес» предусмотрено и это.
+									.list 
+										.list__title.fat Региональное продвижение:
+										.list__li От 2 до 4 регионов на ваш выбор
+										.list__li Возможность разместить свои товары на площадках в 214 городах РФ
+										.list__li Онлайн-оплата и доставка. Клиенту удобно совершать покупки и получать товары.
+									.site__line
+									.site__end.end
+										.end__title.fat Что в итоге?
+										.end__subtitle Покупатель легко находит товар, видит актуальную цену и наличие, оформляет заказ, тут же оплачивает и заказывает доставку (если нужна). Все довольны.
+					.benefit__end 
+						p.end__title Хотите получить готовый сайт с каталогом, рабочим механизмом и подготовленным выходом на новые рынки?  Обратитесь к своему менеджеру, он (она) расскажет подробнее о возможностях и условиях подключения тарифа Бизнес.
+						+button('{crm_analytics:click_link(Заказать консультацию,#order,network_actions,НК_Бизнес_Консультаци)}', 'Заказать консультацию', 'section-buttonAccent' )
+						p.end__note Внимание! Сейчас действуют особенно выгодные условия на подключение тарифа «Бизнес».
+
+		include ./modules/footer.pug
+	p {crm_analytics:show_page(network_actions,НК_Бизнес)}
