@@ -27,6 +27,24 @@
 			display: none;
 		}
 	}
+	.section-buttonWhite {
+		margin-top: var(--block);
+	}
+}
+
+.increase {
+	background: url('https://www.pulscen.ru/system/ckeditor_assets/pictures/303410/content_group_1442.png') no-repeat 0% 0% / cover;
+	.header__wrapper {
+		@include grid(2vw, 1fr 1fr);
+		margin-top: 7vw;
+		padding-bottom: 12vw;
+		.header__img {
+			img {
+				max-width: 114%;
+				width: 114%;
+			}
+		}
+	}
 }
 
 .mainIndex {
@@ -122,6 +140,13 @@
 				@include grid(var(--block), auto 1fr);
 			}
 		}
+	}
+	.item__note__cursive {
+		padding-top: 10px;
+		margin-top: 10px;
+		font-style: italic;
+		font-weight: 400;
+		border-top: 1px solid #ffffff63;
 	}
 	.benefits {
 		background: #f6f6f6;
@@ -278,8 +303,11 @@
 				margin: 10px 0 20px;
 			}
 			.case__block {
-				@include grid(16px, 1fr 1fr);
+				@include grid(16px, 1fr);
 				margin-top: 17px;
+				img {
+					max-width: 100%;
+				}
 			}
 			.item__title {
 				margin-bottom: 10px;
@@ -507,6 +535,9 @@
 	.offer {
 		display: grid;
 		max-width: 100%;
+	}
+	.increase {
+		background: url(https://www.pulscen.ru/system/ckeditor_assets/pictures/303410/content_group_1442.png) no-repeat 48% 0%/300%;
 	}
 }
 

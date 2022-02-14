@@ -69,6 +69,11 @@ module.exports = {
             template: './src/index.pug',
             inject: 'body'
         }),
+        new HtmlWebpackPlugin({
+            filename: "incriase.html",
+            template: './src/incriase.pug',
+            inject: 'body'
+        }),
         new HtmlWebpackPugPlugin(),
         new MiniCssExtractPlugin({
             filename: "bundle.css",

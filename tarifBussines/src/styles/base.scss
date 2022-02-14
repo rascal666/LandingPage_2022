@@ -23,6 +23,14 @@
 	filter: drop-shadow(0px 4px 16px rgba(29, 66, 98, 0.15));
 	align-items: center;
 }
+.section-buttonWhite {
+	@include btn(14px, #fff, #fff, $main_text_color, 17px 40px);
+	border-radius: 100px;
+	color: inherit;
+	font-weight: 800;
+	filter: drop-shadow(0px 4px 16px rgba(29, 66, 98, 0.15));
+	align-items: center;
+}
 
 .section-buttonAccent {
 	@include btn(14px, $accent, $accentColor, #fff, 17px 40px);
@@ -62,7 +70,7 @@
 // заголовки
 
 .section_h1 {
-	font-size: 48px;
+	font-size: 47px;
 	font-weight: 800;
 }
 .section_h2 {
