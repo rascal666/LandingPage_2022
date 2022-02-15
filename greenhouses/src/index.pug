@@ -1,0 +1,118 @@
+<!-- @format -->
+include ./miksins.pug
+
+
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+		title= "оставить товары"
+	body.js-body
+		.main_content
+			header
+				include ./modules/toolbar.pug
+				.header
+					.content
+						.header__wrapper
+							.header__text
+								.header__heading.section_h1 Высокий спрос на ваши товары
+								.offer
+									p Начинается сезон. Количество заказов на товары для дач, огородов и сельского хозяйства растет каждую неделю. В 2021 году компании на Пульсе цен заработали свыше 2 млрд рублей на их  продаже. Посмотрите, что ищут покупатели:
+									img.mobile__img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/304882/content_frame_1474.png")
+								.section_blockColl
+									+buttonLink('{crm_analytics:click_link(Смотреть заявки,#sale,network_actions,НК_с/х_товары_Заявки_curData)}', 'Смотреть заявки', 'section-buttonAccent', '#cases')
+									+button('{crm_analytics:click_link(Расскажите голосом,#order,network_actions,НК_с/х_товары_Консультация_curData)}', 'Расскажите голосом', 'section-button')
+								p.header__textNote Если подключить платное продвижение сейчас, ваши товары займут конверсионные места в каталоге и их увидит больше покупателей. 
+							.header__img
+								img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/304882/content_frame_1474.png")
+			section.rascal2
+				.sale#sale
+					.content 
+						p.sale__title.section_h2 Начинать продавать нужно сейчас
+						p.sale__subtitle #[span.fat.accent 139 830] заказов получили компании на Пульсе цен с февраля по сентябрь 2021 г, на сумму больше #[span.fat.accent 2 млрд рублей].
+						p.sale__subtitle2 Наступает горячая пора для продажи сельскохозяйственных товаров и товаров для дач и огородов. Посмотрите что ищут, и в каких рубриках каталога.
+						p.sale__subtitleNote Товары, которые компании продают через Пульс цен, размещаются в соответствующих рубриках каталога.
+						.sale__stat.stat 
+							.stat__wrapper 
+								div 
+									.stat_title.section_h4 #[span.fat Что покупают ] (ТОП товаров)
+									.list 
+										p Карбамид
+										p Медный купорос
+										p Теплица
+										p Туалет для дачи
+										p Вилла-планта питомник растений
+										p Земля для грядок
+										p Поликарбонат для теплицы
+										p Душ для дачи
+										p Грунт плодородный
+										p Торф
+										p Комбикорм
+								div 
+									.stat_title.section_h4 #[span.fat Где покупают ] (ТОП рубрик каталога)
+									.list 
+										.list__item 
+											p Товары для сада и огорода
+											span.fat.accent 181 413 
+										.list__item 
+											p Зерно, корма
+											span.fat.accent 89 640
+										.list__item 
+											p Средства ухода за растениями
+											span.fat.accent 86 668
+										.list__item 
+											p Садовые растения, цветы	
+											span.fat.accent 80 843
+										.list__item 
+											p Сельхозтехника, с/х оборудование
+											span.fat.accent 42 558
+										.list__item 
+											p Почва, плодородный грунт
+											span.fat.accent 41 737
+										.list__item 
+											p Оборудование для животноводства и птицеводства
+											span.fat.accent 33 314
+										.list__item 
+											p Семена, рассада, саженцы
+											span.fat.accent 20 155
+										.list__item 
+											p Бани, сауны, хамамы
+											span.fat.accent 18 588
+										.list__item 
+											p Запчасти для сельхозтехники, сельхозоборудования
+											span.fat.accent 14 342
+										.list__item 
+											p Сельскохозяйственные услуги
+											span.fat.accent 6 486
+						.stat__end В период с февраля по сентябрь 2021 года на Пульсе цен закупились 620 213 покупателей на общую сумму свыше 2 млрд рублей. Хотите, быть в числе тех, кто получил эти заказы и деньги? 
+							.section_blockColl
+								+button('{crm_analytics:click_link(Хочу заказы с Пульса цен,#order,network_actions,НК_с/х_товары_Консультация_curData)}', 'Хочу заказы с Пульса цен', 'section-buttonAccent')
+								+buttonLink('{crm_analytics:click_link(Смотреть кейсы,#cases,network_actions,НК_с/х_товары_кейс_curData)}', 'Смотреть кейсы', 'section-button', '#cases')
+				.cases#cases 
+					.content 
+						.cases__wrapper
+							.cases__title.section_h2 Кейсы компаний на Пульсе цен
+							.cases__block.block 
+								.block__item
+									.item__title.section_h4.fat Компания ИП Деревянко, г. Новосибирск
+									.item__subtitle Продажа теплиц и товаров для огородного хозяйства.
+									.item__result 
+										.result__heading.fat За 2021 год компания получил 384 заказа на общую сумму 2,9 млн. рублей
+										.result__offer 
+											p #[span.fat 31 347] раз покупатели смотрели товары
+											p #[span.fat 17 093] человека зашли на сайт просмотров товаров
+									+buttonEvent("{crm_analytics:click_link(Развернуть подробный кейс,#order,network_actions,НК_с/х_товары_Кейс-1_curData)}", "Развернуть подробный кейс", "section-buttonAccent", "button1", "popup1")
+								.block__item
+									.item__title.section_h4.fat Компания МПК ТЕПЛИЦЫ КУБАНИ, г. Краснодар
+									.item__subtitle Продажа теплиц арочных и прямостенных, огородных и промышленных.
+									.item__result 
+										.result__heading.fat За 2021 год компания получил 152 заказа на общую сумму 2,4 млн. рублей
+										.result__offer 
+											p #[span.fat 52 919] раз покупатели смотрели товары
+											p #[span.fat 18 974	] человека зашли на сайт
+									+buttonEvent("{crm_analytics:click_link(Развернуть подробный кейс,#order,network_actions,НК_с/х_товары_Кейс-2_curData)}", "Развернуть подробный кейс", "section-buttonAccent", "button2", "popup2")
+		include ./modules/derevianko.pug
+		include ./modules/kuban.pug
+		include ./modules/footer.pug
+	p {crm_analytics:show_page(network_actions,НК_с/х_товары_curData)}
+	
