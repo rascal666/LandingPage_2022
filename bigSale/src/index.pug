@@ -1,0 +1,119 @@
+<!-- @format -->
+include ./miksins.pug
+
+
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+		title= "оставить товары"
+	body.js-body
+		.main_content
+			header
+				include ./modules/toolbar.pug
+				.header
+					.content
+						.header__wrapper
+							.header__text
+								.header__heading.section_h2 Для тех, кто готов к большим продажам
+								.offer
+									p Тариф «Бизнес» — это готовое решение для компаний, которые хотят больше рынков сбыта, больше клиентов и больше продаж. В нем есть все, что для этого нужно:
+									img.mobile__img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/304986/content_illyustratsiya.png")
+								.list 
+									.list__li Сайт с индивидуальным дизайном, удобный и понятный покупателям
+									.list__li SEO-проработка под требования Яндекса и Google
+									.list__li Сервисы, которые не дадут клиенту засомневаться и передумать
+									.list__li Продажи в других городах без посредников и открытия филиалов
+								.offer
+									p.fat Что в итоге?
+									p Вы получаете целевых покупателей из поисковиков, увеличиваете продажи в своем городе и других регионах на выбор. Посмотрите кейсы, которые наглядно показывают, как работает тариф.
+								.section_blockColl
+									+buttonLink('{crm_analytics:click_link(Посмотреть кейсы,#sale,network_actions,НК_с/х_товары_Заявки_curData)}', 'Посмотреть кейсы', 'section-buttonAccent', '#cases')
+									+button('{crm_analytics:click_link(Узнать больше,#order,network_actions,НК_с/х_товары_Консультация_curData)}', 'Узнать больше', 'section-button')
+							.header__img
+								img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/304986/content_illyustratsiya.png")
+			section.rascal2
+				.benefits#next
+					.site__sliderDg
+						img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/305040/content_ellipse_225.png", alt="")
+					.content 
+						.benefits__title.section_h3 Чем так хорош тариф «Бизнес»
+						.benefits__subtitle Выбирая «Бизнес», вы получаете комплексную проработку сайта и продаете по всей России*.
+						.benefits__site.site
+							div 
+								.site__circleBg
+									.circleBg
+									.site__title.section_h3 Проработка сайта
+								.list 
+									.list__li Дизайнерское оформление сайта и удобный каталог, чтобы зацепить покупателей
+									.list__li Грамотная SEO-проработка, чтобы понравиться поисковикам
+									.list__li Модули онлайн-оплаты и расчета доставки, чтобы клиенты сразу оплачивали заказ
+									.list__li Учет остатков и автообновление цен через 1С или Мой склад, чтобы информация о товарах на сайте всегда была актуальной
+									.list__li Настройка Google Analytics и Яндекс.Метрики, чтобы отслеживать результаты
+									.list__li Анализ и оптимизация сайта на протяжении всего периода размещения
+							div.site__wrapper 
+								div 
+									.site__circleBg
+										.circleBg
+										.site__title.section_h3 Региональное продвижение
+									.list 
+										.list__li Безлимитный каталог товаров**, чтобы покупатели могли все заказать у вас
+										.list__li Товары на лучших местах в рубриках Пульса цен в родном городе и 2-4 дополнительных регионах на выбор
+										.list__li Ваши товары с пометкой «Доставка» видят клиенты еще из 214 городов РФ*, чтобы продавать по всей стране
+								div 
+									.site__line
+									.site__end.end
+										.end__subtitle *Доступно на тарифе «Бизнес.Платина».  </br>**Загрузка свыше 10 000 требует дополнительного согласования.
+				.sectionSlider 
+					.site__slider
+							// Slider main container
+							.swiper.slider-r
+								// Additional required wrapper
+								p.slider-r__title.fat Примеры сайтов на тарифе «Бизнес»
+								.swiper-wrapper
+									// Slides
+									.swiper-slide
+										img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/304987/content_sayt_5.png", alt="")
+									.swiper-slide
+										img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/304988/content_sayt_6.png", alt="")
+									.swiper-slide
+										img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/304990/content_sayt_7.png", alt="")
+									.swiper-slide
+										img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/304991/content_sayt_1.png", alt="")
+								// If we need pagination
+								.swiper-pagination
+								// If we need navigation buttons
+								img.button-prev(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/302831/content_strelka_vlevo.png", alt="")
+								img.button-next(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/302833/content_strelka_vpravo.png", alt="")
+								
+								// If we need scrollbar
+								.swiper-scrollbar
+				.cases#cases 
+					.content 
+						.cases__wrapper
+							.cases__title.section_h2 Кейсы клиентов Пульса цен на тарифе «Бизнес»
+							.cases__subtitle С помощью тарифа «Бизнес» вы увеличиваете продажи в своем городе и начинаете продавать в других. Кейсы наших клиентов наглядно это показывают.
+							.cases__block.block 
+								.block__item
+									.item__title.section_h4.fat Компания ИП Деревянко, г. Новосибирск
+									.item__subtitle Продажа теплиц и товаров для огородного хозяйства.
+									.item__result 
+										.result__heading.fat За 2021 год компания получил 384 заказа на общую сумму 2,9 млн. рублей
+										.result__offer 
+											p #[span.fat 31 347] раз покупатели смотрели товары
+											p #[span.fat 17 093] человека зашли на сайт просмотров товаров
+									+buttonEvent("{crm_analytics:click_link(Развернуть подробный кейс,#order,network_actions,НК_с/х_товары_Кейс-1_curData)}", "Развернуть подробный кейс", "section-buttonAccent", "button1", "popup1")
+								.block__item
+									.item__title.section_h4.fat Компания МПК ТЕПЛИЦЫ КУБАНИ, г. Краснодар
+									.item__subtitle Продажа теплиц арочных и прямостенных, огородных и промышленных.
+									.item__result 
+										.result__heading.fat За 2021 год компания получил 152 заказа на общую сумму 2,4 млн. рублей
+										.result__offer 
+											p #[span.fat 52 919] раз покупатели смотрели товары
+											p #[span.fat 18 974	] человека зашли на сайт
+									+buttonEvent("{crm_analytics:click_link(Развернуть подробный кейс,#order,network_actions,НК_с/х_товары_Кейс-2_curData)}", "Развернуть подробный кейс", "section-buttonAccent", "button2", "popup2")
+		include ./modules/derevianko.pug
+		include ./modules/kuban.pug
+		include ./modules/footer.pug
+	p {crm_analytics:show_page(network_actions,НК_с/х_товары_curData)}
+	
