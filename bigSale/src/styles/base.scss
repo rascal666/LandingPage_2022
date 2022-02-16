@@ -31,6 +31,13 @@
 	z-index: 3;
 	position: relative;
 }
+.section-buttonAccentBlue {
+	@include btn(14px, $corporate_color, $corporate_color, #fff, 17px 40px);
+	border-radius: 100px;
+	filter: drop-shadow(0px 4px 16px rgba(29, 66, 98, 0.15));
+	z-index: 3;
+	position: relative;
+}
 
 .section-buttonToolbar {
 	@include btn(14px, #ffffff00, $corporate_color, $corporate_color, 8px 30px);
@@ -56,6 +63,12 @@
 	color: #fff !important;
 	border: 1px solid #fff;
 }
+.section-buttonAccentBlue:hover {
+	cursor: pointer;
+	background: rgba(255, 255, 255, 0);
+	color: $corporate_color !important;
+	border: 1px solid $corporate_color;
+}
 .section-buttonToolbar:hover {
 	cursor: pointer;
 	background: #ffffff00;
@@ -67,21 +80,21 @@
 .section_h1 {
 	font-size: 48px;
 	font-weight: 800;
-    line-height: initial;
+	line-height: initial;
 }
 .section_h2 {
 	font-size: 36px;
 	font-weight: 800;
-    line-height: initial;
+	line-height: initial;
 }
 .section_h3 {
 	font-size: 24px;
 	font-weight: 700;
-    line-height: initial;
+	line-height: initial;
 }
 .section_h4 {
 	font-size: 20px;
-    line-height: initial;
+	line-height: initial;
 }
 
 .section-subtitle {

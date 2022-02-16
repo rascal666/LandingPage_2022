@@ -28,8 +28,8 @@ html(lang="ru")
 									p.fat Что в итоге?
 									p Вы получаете целевых покупателей из поисковиков, увеличиваете продажи в своем городе и других регионах на выбор. Посмотрите кейсы, которые наглядно показывают, как работает тариф.
 								.section_blockColl
-									+buttonLink('{crm_analytics:click_link(Посмотреть кейсы,#sale,network_actions,НК_с/х_товары_Заявки_curData)}', 'Посмотреть кейсы', 'section-buttonAccent', '#cases')
-									+button('{crm_analytics:click_link(Узнать больше,#order,network_actions,НК_с/х_товары_Консультация_curData)}', 'Узнать больше', 'section-button')
+									+buttonLink('{crm_analytics:click_link(Посмотреть кейсы,#cases,network_actions,НК_Бизнес_Смотреть кейсы_curData)}', 'Посмотреть кейсы', 'section-buttonAccent', '#cases')
+									+buttonLink('{crm_analytics:click_link(Узнать больше,#next,network_actions,НК_Бизнес_Подробнее_curData)}', 'Узнать больше', 'section-button','#next')
 							.header__img
 								img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/304986/content_illyustratsiya.png")
 			section.rascal2
@@ -69,7 +69,7 @@ html(lang="ru")
 							// Slider main container
 							.swiper.slider-r
 								// Additional required wrapper
-								p.slider-r__title.fat Примеры сайтов на тарифе «Бизнес»
+								p.slider-r__title.fat.section_h3 Примеры сайтов на тарифе «Бизнес»
 								.swiper-wrapper
 									// Slides
 									.swiper-slide
@@ -91,29 +91,47 @@ html(lang="ru")
 				.cases#cases 
 					.content 
 						.cases__wrapper
-							.cases__title.section_h2 Кейсы клиентов Пульса цен на тарифе «Бизнес»
+							.cases__title.section_h3 Кейсы клиентов Пульса цен на тарифе «Бизнес»
 							.cases__subtitle С помощью тарифа «Бизнес» вы увеличиваете продажи в своем городе и начинаете продавать в других. Кейсы наших клиентов наглядно это показывают.
 							.cases__block.block 
 								.block__item
-									.item__title.section_h4.fat Компания ИП Деревянко, г. Новосибирск
-									.item__subtitle Продажа теплиц и товаров для огородного хозяйства.
+									.item__title.section_h4.fat СТРОЙКАПИТАЛ, </br> #[span.accentOrange «Бизнес. Платина» ] 
+									.item__subtitle Продажа стройматериалов, грузоперевозки, г. Екатеринбург
 									.item__result 
-										.result__heading.fat За 2021 год компания получил 384 заказа на общую сумму 2,9 млн. рублей
+										.result__heading.fat За 2021 год:
 										.result__offer 
-											p #[span.fat 31 347] раз покупатели смотрели товары
-											p #[span.fat 17 093] человека зашли на сайт просмотров товаров
-									+buttonEvent("{crm_analytics:click_link(Развернуть подробный кейс,#order,network_actions,НК_с/х_товары_Кейс-1_curData)}", "Развернуть подробный кейс", "section-buttonAccent", "button1", "popup1")
+											p #[span.fat.accentOrange 51 067]  просмотров товаров
+											p #[span.fat.accentOrange 35 660] посетителей сайта
+											p #[span.fat.accentOrange 446] заказов на общую сумму #[span.fat.accentOrange 22,4]  млн руб.
+									+buttonEvent("{crm_analytics:click_link(Смотреть кейс полностью,#order,network_actions,НК_Бизнес_Кейс-1_curData)}", "Смотреть кейс полностью", "section-buttonAccent", "button1", "popup1")
 								.block__item
-									.item__title.section_h4.fat Компания МПК ТЕПЛИЦЫ КУБАНИ, г. Краснодар
-									.item__subtitle Продажа теплиц арочных и прямостенных, огородных и промышленных.
+									.item__title.section_h4.fat СТИЛ-УРАЛ, </br> #[span.accentOrange «Бизнес. Платина» ] 
+									.item__subtitle Поставки изделий металлопроката, г.Пермь
 									.item__result 
-										.result__heading.fat За 2021 год компания получил 152 заказа на общую сумму 2,4 млн. рублей
+										.result__heading.fat За 2021 год:
 										.result__offer 
-											p #[span.fat 52 919] раз покупатели смотрели товары
-											p #[span.fat 18 974	] человека зашли на сайт
-									+buttonEvent("{crm_analytics:click_link(Развернуть подробный кейс,#order,network_actions,НК_с/х_товары_Кейс-2_curData)}", "Развернуть подробный кейс", "section-buttonAccent", "button2", "popup2")
-		include ./modules/derevianko.pug
-		include ./modules/kuban.pug
+											p #[span.fat.accentOrange 36 033]  просмотров товаров
+											p #[span.fat.accentOrange 21 148] посетителей сайта
+											p #[span.fat.accentOrange 215] заказов на общую сумму #[span.fat.accentOrange  10,9]  млн руб.
+									+buttonEvent("{crm_analytics:click_link(Смотреть кейс полностью,#order,network_actions,НК_Бизнес_Кейс-2_curData)}", "Смотреть кейс полностью", "section-buttonAccent", "button2", "popup2")
+								.block__item
+									.item__title.section_h4.fat СТРОЙСНАБКОМПЛЕКТ, </br> #[span.accentOrange «Бизнес. Платина» ] 
+									.item__subtitle Продажа металлопроката и стройматериалов, г. Екатеринбург
+									.item__result 
+										.result__heading.fat За 2021 год:
+										.result__offer 
+											p #[span.fat.accentOrange 28 827]  просмотров товаров
+											p #[span.fat.accentOrange 19 062] посетителей сайта
+											p #[span.fat.accentOrange 170] заказов на общую сумму #[span.fat.accentOrange 29,5]  млн руб.
+									+buttonEvent("{crm_analytics:click_link(Смотреть кейс полностью,#order,network_actions,НК_Бизнес_Кейс-3_curData)}", "Смотреть кейс полностью", "section-buttonAccent", "button3", "popup3")
+							.cases__end 
+								.end__offer 
+									p Сейчас действуют выгодные условия на подключение тарифа «Бизнес».
+									p Наш специалист Елена Толстова ответит на ваши вопросы.
+								+button('{crm_analytics:click_link(Заказать консультацию,#order,network_actions,НК_Бизнес_Консультация_curData)}', 'Заказать консультацию', 'section-buttonAccentBlue')
+		include ./modules/stoyKapital.pug
+		include ./modules/stilUral.pug
+		include ./modules/stroySnabkomplekt.pug
 		include ./modules/footer.pug
-	p {crm_analytics:show_page(network_actions,НК_с/х_товары_curData)}
+	p {crm_analytics:show_page(network_actions,НК_Бизнес_curData)}
 	

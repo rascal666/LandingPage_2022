@@ -4,7 +4,6 @@
 .main_content {
 	@include mainContent(16px, $main_text_color);
 	overflow: hidden;
-	line-height: 1.5em;
 }
 
 .section_blockColl {
@@ -14,6 +13,7 @@
 
 * {
 	scroll-behavior: smooth;
+	line-height: 1.5em;
 }
 .accent {
 	color: $corporate_color;
@@ -30,6 +30,10 @@
 .accentFio {
 	color: #6d64ff;
 }
+.accentOrange {
+	color: #ff814f;
+}
+
 .fat {
 	font-weight: 700;
 }
@@ -41,7 +45,7 @@
 	z-index: 2;
 }
 .sectionHint:hover::before {
-	content: "РСЯ — это рекламная сеть Яндекса. Она включает более 1000 популярных сайтов (РБК, Gismeteo.ru, Одноклассники, Mail.group.ru и др.), на которых будет показываться ваша реклама.";
+	content: 'РСЯ — это рекламная сеть Яндекса. Она включает более 1000 популярных сайтов (РБК, Gismeteo.ru, Одноклассники, Mail.group.ru и др.), на которых будет показываться ваша реклама.';
 	position: absolute;
 	top: 36px;
 	left: -16px;
@@ -57,8 +61,7 @@
 	font-size: 14px;
 }
 header {
-	background:
-		linear-gradient(264.51deg, #0085ff -44.2%, #0051cb 89.1%);
+	background: linear-gradient(264.51deg, #0085ff -44.2%, #0051cb 89.1%);
 }
 .header__wrapper {
 	@include grid(2vw, 1.5fr 1fr);
@@ -73,7 +76,7 @@ header {
 			margin-top: calc(var(--block) - 10px);
 		}
 	}
-	.list{
+	.list {
 		margin: var(--section) 0;
 	}
 	.header__img {
@@ -81,7 +84,7 @@ header {
 		right: 0vw;
 		img {
 			max-width: 150%;
-    width: 150%;
+			width: 150%;
 		}
 	}
 	.mobile__img {
@@ -90,7 +93,6 @@ header {
 }
 
 .sale {
-	
 	padding-top: var(--section);
 	.sale__subtitle,
 	.sale__subtitle2 {
@@ -156,7 +158,7 @@ header {
 	min-width: 0;
 	max-width: 100%;
 	position: relative;
-	.site__sliderDg{
+	.site__sliderDg {
 		position: absolute;
 		right: 0;
 		top: 0;
@@ -174,7 +176,7 @@ header {
 			left: -50px;
 		}
 	}
-	.site__wrapper{
+	.site__wrapper {
 		display: grid;
 		align-content: space-between;
 	}
@@ -197,8 +199,8 @@ header {
 		opacity: 0.2;
 		margin: var(--block) 0 10px;
 	}
-	.end__subtitle{
-		color: #A6AAB2;
+	.end__subtitle {
+		color: #a6aab2;
 
 		opacity: 0.5;
 	}
@@ -224,15 +226,14 @@ header {
 			margin-bottom: 20px;
 		}
 	}
-	
 }
 
-.sectionSlider{
+.sectionSlider {
 	background: url('https://www.pulscen.ru/system/ckeditor_assets/pictures/305034/content_ellipse_223.png') no-repeat 0% 0% / 100%;
 	max-width: 1116px;
-    margin: auto;
-    padding-top: 116px;
-	.slider-r{
+	margin: auto;
+	padding-top: 116px;
+	.slider-r {
 		height: fit-content;
 	}
 	.site__slider {
@@ -244,7 +245,6 @@ header {
 		.slider-r__title {
 			width: fit-content;
 			margin: auto;
-			
 		}
 		img {
 			max-width: 87%;
@@ -267,13 +267,12 @@ header {
 		.swiper-pagination {
 			position: absolute;
 			bottom: 10px;
-			right: 10px;
 			width: auto !important;
 			left: 50%;
 			margin: 0;
 			display: flex;
 			grid-gap: 10px;
-			transform: translate(0, -50%);
+			transform: translate(-50%, 50%);
 			z-index: 2;
 		}
 		.swiper-pagination-bullet {
@@ -299,7 +298,18 @@ header {
 .cases {
 	margin: var(--section) 0;
 	.cases__block {
-		@include grid(30px, 1fr 1fr);
+		@include grid(30px, repeat(auto-fit, minmax(250px, 1fr)));
+	}
+	.cases__end {
+		.end__offer {
+			display: grid;
+			grid-gap: 10px;
+			margin-bottom: var(--block);
+			margin-top: var(--section_h2);
+		}
+	}
+	.cases__title {
+		margin-bottom: 16px;
 	}
 	.block__item {
 		padding: var(--block);
@@ -327,7 +337,7 @@ header {
 
 .derevianko {
 	color: #2e3b4f;
-	font-family: "Montserrat", sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	margin-top: var(--section_h2);
 	.section-buttonAccent {
 		background: $corporate_color;
@@ -357,7 +367,7 @@ header {
 			margin: 16px 0 var(--block);
 			.block__item {
 				@include grid(16px, auto 1fr);
-				align-items: normal;
+				align-items: center;
 			}
 			.item__icon {
 				width: 40px;
@@ -380,7 +390,7 @@ header {
 		margin-top: var(--section_h2);
 		.work__block {
 			margin-top: var(--block);
-			.work__title{
+			.work__title {
 				padding: 10px 40px;
 				background: rgb(0 132 255 / 10%);
 				border-radius: 30px;
@@ -403,13 +413,16 @@ header {
 			.item__img {
 				max-width: 460px;
 				width: 100%;
-
 			}
-			
+
 			.block__item {
 				.item__offer {
 					display: grid;
 					grid-gap: 20px;
+					.offer__grid {
+						display: grid;
+						grid-gap: 10px;
+					}
 				}
 				.item__line {
 					width: 230px;
@@ -504,19 +517,13 @@ header {
 				width: 125%;
 			}
 		}
-
 	}
 }
 
 @media (max-width: 1440px) {
 	header {
-		background: url(https://www.pulscen.ru/system/ckeditor_assets/pictures/304881/content_group_8.png) no-repeat 30%
-				51%/50%,
-			linear-gradient(264.51deg, #0085ff -44.2%, #0051cb 89.1%);
+		background: linear-gradient(264.51deg, #0085ff -44.2%, #0051cb 89.1%);
 	}
-	
-
-	
 }
 @media (max-width: 1366px) {
 }
@@ -531,6 +538,7 @@ header {
 	:root {
 		--section: 40px;
 		--section_h2: 26px;
+		--section_h0: 60px;
 		--block: 24px;
 	}
 	.header__wrapper {
@@ -556,22 +564,36 @@ header {
 		}
 	}
 	.benefits {
-			
-			.benefits__site {
-				grid-template-columns: 1fr;
-			}
-			
+		.benefits__site {
+			grid-template-columns: 1fr;
 		}
-	.sectionSlider{
+	}
+	.sectionSlider {
+		padding-top: 0px;
+		background: url(https://www.pulscen.ru/system/ckeditor_assets/pictures/305034/content_ellipse_223.png) no-repeat 50% 0% / contain;
 		.site__slider {
-			top: 47px;
+			top: 0px;
 			.button-prev,
 			.button-next {
 				width: 34px;
 			}
+			img {
+				// max-width: 48%;
+			}
+			.swiper-pagination {
+				bottom: -10px;
+			}
+			.swiper-pagination-bullet {
+				padding: 10px 10px;
+				width: 10px;
+				height: 10px;
+			}
 		}
-	}	
-	
+	}
+	.cases {
+		margin: 50px 0;
+	}
+
 	.derevianko {
 		.modal__result {
 			.result__chart {
@@ -585,10 +607,7 @@ header {
 	.solution__block {
 		grid-template-columns: 1fr;
 	}
-	
-	
 }
-
 
 @media (max-width: 900px) {
 }
@@ -614,13 +633,15 @@ header {
 		padding: var(--block) 20px;
 		margin: 40px -16px 0;
 	}
-	.derevianko .modal__task, .derevianko .modal__result, .derevianko .modal__work {
+	.derevianko .modal__task,
+	.derevianko .modal__result,
+	.derevianko .modal__work {
 		margin: 40px -16px 0;
 	}
-	.derevianko  {
+	.derevianko {
 		font-size: 14px;
 	}
-	.derevianko{
+	.derevianko {
 		margin-top: 0;
 	}
 	.sale {
@@ -650,9 +671,8 @@ header {
 		margin: auto;
 	}
 	.benefits {
-		
 	}
-	.sectionSlider{
+	.sectionSlider {
 		.site__slider {
 			.button-prev,
 			.button-next {
