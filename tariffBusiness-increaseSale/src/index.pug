@@ -1,0 +1,77 @@
+<!-- @format -->
+include ./miksins.pug
+
+
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+		title= "оставить товары"
+	body.js-body
+		.main_content
+			header
+				include ./modules/toolbar.pug
+				.header
+					.content
+						.header__wrapper
+							.header__text
+								.header__heading.section_h2 Тариф «Бизнес» по выгодной цене
+								.offer
+									p До повышения стоимости тарифа #[span.fat.accentOr остался 1 месяц ].
+									img.mobile__img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/307471/content_illyustratsiya.png")
+								.list
+									.list__heading Тариф «Бизнес» — это готовое решение для компаний, которые хотят большего: расширить географию сбыта, получать больше клиентов и увеличить продажи. В нем есть все, что для этого нужно: 
+									.list__li Сайт с индивидуальным дизайном, удобный и понятный покупателям
+									.list__li SEO-проработка под требования Яндекса и Google
+									.list__li Сервисы, которые не дадут клиенту засомневаться и передумать
+									.list__li Продажи в других городах без посредников и открытия филиалов
+								.offer
+									p.fat Что в итоге?
+									p Вы получаете целевых покупателей из поисковиков, увеличиваете продажи в своем городе и других регионах на выбор.
+								.section_blockColl
+									+buttonLink('{crm_analytics:click_link(Смотреть дальше,#next,network_actions,НК_Бизнес_Подробнее_curData)}', 'Смотреть дальше', 'section-buttonAccent', '#cases')
+									+button('{crm_analytics:click_link(Заказать бесплатную консультацию,#order,network_actions,НК_Бизнес_Консультация_curData)}', 'Заказать бесплатную консультацию', 'section-button','#next')
+							.header__img
+								img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/307471/content_illyustratsiya.png")
+			section.rascal2
+				.benefits#next
+					.site__sliderDg
+						img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/307473/content_ellipse_224.png", alt="")
+					.content 
+						.benefits__title.section_h3 Почему «Бизнес» вам подходит
+						.benefits__subtitle Выбирая «Бизнес», вы получаете комплексную проработку сайта и продаете по всей России*.
+						.benefits__site.site
+							div 
+								.site__circleBg
+									.circleBg
+									.site__title.section_h3 Проработка сайта
+								.list 
+									.list__li Дизайнерское оформление сайта и удобный каталог, чтобы зацепить покупателей
+									.list__li Грамотная SEO-проработка, чтобы понравиться поисковикам
+									.list__li Модули онлайн-оплаты и расчета доставки, чтобы клиенты сразу оплачивали заказ
+									.list__li Учет остатков и автообновление цен через 1С или Мой склад, чтобы информация о товарах на сайте всегда была актуальной
+									.list__li Настройка Google Analytics и Яндекс.Метрики, чтобы отслеживать результаты
+									.list__li Анализ и оптимизация сайта на протяжении всего периода размещения
+							div.site__wrapper 
+								div 
+									.site__circleBg
+										.circleBg
+										.site__title.section_h3 Региональное продвижение
+									.list 
+										.list__li Безлимитный каталог товаров**, чтобы покупатели могли все заказать у вас
+										.list__li Товары на лучших местах в рубриках Пульса цен в родном городе и 2-4 дополнительных регионах на выбор
+										.list__li Ваши товары с пометкой «Доставка» видят клиенты еще из 214 городов РФ*, чтобы продавать по всей стране
+								div 
+									.site__line
+									.site__end.end
+										.end__subtitle *Доступно на тарифе «Бизнес.Платина».  </br>**Загрузка свыше 10 000 требует дополнительного согласования.
+				.cases#cases 
+					.content 
+						.cases__wrapper 
+							.cases__end 
+								.end__offer 
+									p Забронируйте подключение тарифа «Бизнес» по стоимости прошлого года сейчас.
+								+button('{crm_analytics:click_link(Хочу «Бизнес» по выгодной цене,#order,network_actions,НК_Бизнес_Заявка_curData)}', 'Хочу «Бизнес» по выгодной цене', 'section-buttonAccentBlue')
+		include ./modules/footer.pug
+	p {crm_analytics:show_page(network_actions,НК_Бизнес_curData)}
+	
