@@ -1,0 +1,276 @@
+<!-- @format -->
+include ./miksins.pug
+
+
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+		title= "оставить товары"
+	body.js-body
+		.main_content.mainThank.increase
+			header.header
+				.content-header
+					a(href='https://www.pulscen.ru/' target='_blank')
+						img(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195214/content_puls_cen_logo_newx230_1.png' alt='')
+					img.header__img(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195229/content_group_101.png' alt='')
+					p.heading Новые клиенты из регионов или со всей России?
+					.subtitle
+						| Подключите услугу до 31 марта по старой цене и получайте клиентов с любой области целый год.
+					.subtitle2  Что дает региональное размещение: 
+					.benefits
+						.benefits-item
+							.benefits-item__item
+								p.benefits-item__heading Возможность протестировать новый рынок сбыта без риска
+								p.benefits-item__text 2 месяца на то, чтобы оценить потенциал региона
+							.benefits-item__item
+								p.benefits-item__heading Двойная выгода
+								p.benefits-item__text Вы не платите за продвижение в другие регионы, но получаете клиентов.
+							.benefits-item__item
+								p.benefits-item__heading Готовые заявки
+								p.benefits-item__text
+									| С подключением вам будет доступен сервис «Закупки» - это база готовых заявок, которые сами приходят вам на почту
+							.benefits-item__item
+								p.benefits-item__heading Увеличение товарного лимита
+								p.benefits-item__text
+									| Загружайте каталог по полной, закрывайте спрос покупателей основными и сопутствующими товарами
+					p.text.section-weight Что больше подходит вашему бизнесу сейчас?
+					.section-btns
+						.section-btn.weight_400
+							| {crm_analytics:click_link(Продавать в другом регионе,#russia,network_actions,НК_RTRAFIK_Повышение_цен_Регионы_090321)}
+						.section-btnWhite.weight_400
+							| {crm_analytics:click_link(Продавать по всей России,#region,network_actions,НК_RTRAFIK_ВсяРФ_090321)}
+			// all russia
+			section#russia.block
+				.content.block__content
+					.offer
+						.offer__text
+							p.offer__heading.section-weight Продаже в любом регионе страны 
+							p.offer__subtitle
+								| Подключите услугу до 31 марта по старой цене и получайте клиентов с любой области целый год.
+						.offer__img
+							img(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195261/content_group_102.png' alt='')
+					.benefits-wrapper
+						p.heading.section-weight  Выгоды: 
+						.benefits
+							.benefits__item
+								img(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/238597/content_group_644.png' alt='')
+								p Возможность протестировать новый рынок бесплатно
+							.benefits__item
+								img(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/238600/content_group_642.png' alt='')
+								p Усиление продаж в родном регионе
+							.benefits__item
+								img(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/238599/content_group_42.png' alt='')
+								p Новые клиенты из других регионов
+							.benefits__item
+								img(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/238595/content_group_10.png' alt='')
+								p Доступ к сервису «Закупки» — это готовые заявки, оптовые и розничные
+							.benefits__item
+								img(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/238598/content_group_643.png' alt='')
+								p Повышение узнаваемости компании и доверия покупателей
+							.benefits__item
+								img(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/238596/content_group_7.png' alt='')
+								p Увеличение товарного лимита до 10 000
+					.claster-wrapper
+						p.claster-wrapper__heading
+							| Для вашего удобства и еще большей экономии мы объединили регионы в кластеры. Так вы можете протестировать не один, а несколько городов, расположенных рядом.
+						.claster
+							.claster_item
+								#button1.button.item__btn(rel='popup1')
+									p.heading.button(rel='popup1') {crm_analytics:click_link(ЦФО,#klaster,network_actions,НК_RTRAFIK_кла-р_ЦФО_090321)} 
+									p.subtitle.button(rel='popup1')
+										| {crm_analytics:click_link(65 городов,#klaster,network_actions,НК_RTRAFIK_кла-р_ЦФО_090321)}
+								.modal-wrapper
+									.modal-wrapper-block(data-popup='popup1')
+										.modal-block
+											img.modal-close(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195450/content_union_3.png' alt='')
+											.claster__city.FCO
+							.claster_item
+								#button2.button.item__btn(rel='popup2')
+									p.heading.button(rel='popup2')
+										| {crm_analytics:click_link(Поволжье,#klaster,network_actions,НК_RTRAFIK_кла-р_Поволжье_090321)}
+									p.subtitle.button(rel='popup2')
+										| {crm_analytics:click_link(22 городов,#klaster,network_actions,НК_RTRAFIK_кла-р_Поволжье_090321)}
+								.modal-wrapper
+									.modal-wrapper-block(data-popup='popup2')
+										.modal-block
+											img.modal-close(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195450/content_union_3.png' alt='')
+											.claster__city.Povolzie
+							.claster_item
+								#button3.button.item__btn(rel='popup3')
+									p.heading.button(rel='popup3') {crm_analytics:click_link(Крым,#klaster,network_actions,НК_RTRAFIK_кла-р_Крым_090321)}
+									p.subtitle.button(rel='popup3')
+										| {crm_analytics:click_link(5 городов,#klaster,network_actions,НК_RTRAFIK_кла-р_Крым_090321)}
+								.modal-wrapper
+									.modal-wrapper-block(data-popup='popup3')
+										.modal-block
+											img.modal-close(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195450/content_union_3.png' alt='')
+											.claster__city.Crimea
+							.claster_item
+								#button4.button.item__btn(rel='popup4')
+									p.heading.button(rel='popup4')
+										| {crm_analytics:click_link(Краснодар+,#klaster,network_actions,НК_RTRAFIK_кла-р_Краснодар+_090321)}
+									p.subtitle.button(rel='popup4')
+										| {crm_analytics:click_link(19 городов ,#klaster,network_actions,НК_RTRAFIK_кла-р_Краснодар+_090321)}
+								.modal-wrapper
+									.modal-wrapper-block(data-popup='popup4')
+										.modal-block
+											img.modal-close(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195450/content_union_3.png' alt='')
+											.claster__city.Krasnodar
+							.claster_item
+								#button5.button.item__btn(rel='popup5')
+									p.heading.button(rel='popup5')
+										| {crm_analytics:click_link(Ростов-на-Дону ,#klaster,network_actions,НК_RTRAFIK_кла-р_Ростов-на-Дону_090321)}
+									p.subtitle.button(rel='popup5')
+										| {crm_analytics:click_link(23 городов ,#klaster,network_actions,НК_RTRAFIK_кла-р_Ростов-на-Дону_090321)}
+								.modal-wrapper
+									.modal-wrapper-block(data-popup='popup5')
+										.modal-block
+											img.modal-close(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195450/content_union_3.png' alt='')
+											.claster__city.RostovOnDon
+							.claster_item
+								#button6.button.item__btn(rel='popup6')
+									p.heading.button(rel='popup6')
+										| {crm_analytics:click_link(Дальний Восток,#klaster,network_actions,НК_RTRAFIK_кла-р_Дальний Восток_090321)}
+									p.subtitle.button(rel='popup6')
+										| {crm_analytics:click_link( 9 городов,#klaster,network_actions,НК_RTRAFIK_кла-р_Дальний Восток_090321)}
+								.modal-wrapper
+									.modal-wrapper-block(data-popup='popup6')
+										.modal-block
+											img.modal-close(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195450/content_union_3.png' alt='')
+											.claster__city.Vostok
+							.claster_item
+								#button7.button.item__btn(rel='popup7')
+									p.heading.button(rel='popup7')
+										| {crm_analytics:click_link(Татарстан,#klaster,network_actions,НК_RTRAFIK_кла-р_Татарстан_090321)}
+									p.subtitle.button(rel='popup7')
+										| {crm_analytics:click_link(5 городов,#klaster,network_actions,НК_RTRAFIK_кла-р_Татарстан_090321)}
+								.modal-wrapper
+									.modal-wrapper-block(data-popup='popup7')
+										.modal-block
+											img.modal-close(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195450/content_union_3.png' alt='')
+											.claster__city.Tatarstan
+							.claster_item
+								#button8.button.item__btn(rel='popup8')
+									p.heading.button(rel='popup8')
+										| {crm_analytics:click_link(Южный Урал,#klaster,network_actions,НК_RTRAFIK_кла-р_Южный Урал_090321)}
+									p.subtitle.button(rel='popup8')
+										| {crm_analytics:click_link(7 городов ,#klaster,network_actions,НК_RTRAFIK_кла-р_Южный Урал_090321)}
+								.modal-wrapper
+									.modal-wrapper-block(data-popup='popup8')
+										.modal-block
+											img.modal-close(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195450/content_union_3.png' alt='')
+											.claster__city.Yuzhnyy_Ural
+							.claster_item
+								#button9.button.item__btn(rel='popup9')
+									p.heading.button(rel='popup9')
+										| {crm_analytics:click_link(Северо-Западный ,#klaster,network_actions,НК_RTRAFIK_кла-р_Северо-Западный_090321)}
+									p.subtitle.button(rel='popup9')
+										| {crm_analytics:click_link(21 городов ,#klaster,network_actions,НК_RTRAFIK_кла-р_Северо-Западный_090321)}
+								.modal-wrapper
+									.modal-wrapper-block(data-popup='popup9')
+										.modal-block
+											img.modal-close(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195450/content_union_3.png' alt='')
+											.claster__city.Severo_Zapad
+							.claster_item
+								#button10.button.item__btn(rel='popup10')
+									p.heading.button(rel='popup10')
+										| {crm_analytics:click_link(Сибирь,#klaster,network_actions,НК_RTRAFIK_кла-р_Сибирь_090321)}
+									p.subtitle.button(rel='popup10')
+										| {crm_analytics:click_link(17 городов,#klaster,network_actions,НК_RTRAFIK_кла-р_Сибирь_090321)}
+								.modal-wrapper
+									.modal-wrapper-block(data-popup='popup10')
+										.modal-block
+											img.modal-close(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195450/content_union_3.png' alt='')
+											.claster__city.Sibir
+							.claster_item
+								#button11.button.item__btn(rel='popup11')
+									p.heading.button(rel='popup11')
+										| {crm_analytics:click_link(Урало-Сибирский,#klaster,network_actions,НК_RTRAFIK_кла-р_Урало-Сибирский_090321)}
+									p.subtitle.button(rel='popup11')
+										| {crm_analytics:click_link(14 городов,#klaster,network_actions,НК_RTRAFIK_кла-р_Урало-Сибирский_090321)}
+								.modal-wrapper
+									.modal-wrapper-block(data-popup='popup11')
+										.modal-block
+											img.modal-close(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195450/content_union_3.png' alt='')
+											.claster__city.Uralo_Sibirskiy
+							.claster_item
+								#button12.button.item__btn(rel='popup12')
+									p.heading.button(rel='popup12') {crm_analytics:click_link(УрФО,#klaster,network_actions,НК_RTRAFIK_кла-р_УрФО_090321)}
+									p.subtitle.button(rel='popup12')
+										| {crm_analytics:click_link(22 городов,#klaster,network_actions,НК_RTRAFIK_кла-р_УрФО_090321)}
+								.modal-wrapper
+									.modal-wrapper-block(data-popup='popup12')
+										.modal-block
+											img.modal-close(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195450/content_union_3.png' alt='')
+											.claster__city.UrFO
+							.claster_item
+								#button13.button.item__btn(rel='popup13')
+									p.heading.button(rel='popup13')
+										| {crm_analytics:click_link(Екатеринбург + ХМАО и ЯНАО,#klaster,network_actions,НК_RTRAFIK_кла-р_ЕКБ_090321)}
+									p.subtitle.button(rel='popup13')
+										| {crm_analytics:click_link(16 городов,#klaster,network_actions,НК_RTRAFIK_кла-р_ЕКБ_090321)}
+								.modal-wrapper
+									.modal-wrapper-block(data-popup='popup13')
+										.modal-block
+											img.modal-close(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195450/content_union_3.png' alt='')
+											.claster__city.EKB
+							.claster_item
+								#button13.button.item__btn(rel='popup14')
+									p.heading.button(rel='popup14')
+										| {crm_analytics:click_link(Ермак,#klaster,network_actions,НК_RTRAFIK_кла-р_Ермак_090321)}
+									p.subtitle.button(rel='popup14')
+										| {crm_analytics:click_link(16 городов,#klaster,network_actions,НК_RTRAFIK_кла-р_Ермак_090321)}
+								.modal-wrapper
+									.modal-wrapper-block(data-popup='popup14')
+										.modal-block
+											img.modal-close(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195450/content_union_3.png' alt='')
+											.claster__city.Ermak
+						p.claster-wrapper-text
+							| Не упускайте возможность получить прибыль, новых клиентов и протестировать рынок в соседнем или любом другом регионе.
+						p.claster-wrapper-text(style='margin-top: 24px')  Забронируйте цену прошлого года, чтобы сэкономить на привлечении клиентов из других регионов. 
+					.section-btns
+						.section-btn.section-btnCorparate.weight_400.ab-order.js-apress-order-button.js-orders-callback-link(data-button-type='order_callback' data-company='99572059 ' data-company-id='99572059 ' data-company-name='Пульс цен Онлайн' data-company-name-rest='' data-company-url='https://help.pulscen.ru/' data-params='{"company_id":"99572059 "}' data-statistics='1' data-type='callback')
+							| {crm_analytics:click_link(Забронировать старую цену ,#present,network_actions,НК_RTRAFIK_Повышение_цен_Регионы_090321)}
+						// <div class="section-btn section-btnCorparate weight_400">Забронировать подарок</div>
+			// all region
+			section#region.block
+				.content.block__content
+					.offer
+						.offer__text
+							p.offer__heading.section-weight  Заявки из 214 городов России
+							p.offer__subtitle
+								| Хит продаж на Пульсе цен — тариф “Вся Россия”, созданный для компаний с большими амбициями. Это возможность получать заказы из 214 площадках Пульса цен в России. 
+								br
+								|  Для всех, кто подключит тариф «Вся Россия» до 31 марта, будет действовать цена прошлого года.
+						.offer__img
+							img(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195447/content_group_106.png' alt='')
+					.benefits-wrapper
+						p.heading.section-weight  Выгоды: 
+						.benefits
+							.benefits__item
+								img(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/238597/content_group_644.png' alt='')
+								p Возможность протестировать продажи во всех регионах РФ
+							.benefits__item
+								img(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/238598/content_group_643.png' alt='')
+								p Полный охват российского рынка и только целевые клиенты
+							.benefits__item
+								img(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/238595/content_group_10.png' alt='')
+								p 2 месяца продвижения трех главных товаров в Яндекс Директ*
+							.benefits__item
+								img(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/238600/content_group_642.png' alt='')
+								p Самый выгодный тариф. Больше городов — больше заявок и рост прибыли
+							.benefits__item
+								img(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/238599/content_group_42.png' alt='')
+								p Быстрый старт продаж в любом регионе
+							.benefits__item
+								img(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/238594/content_group_11.png' alt='')
+								p Личный менеджер поддержки на весь год
+						div(style='margin-top: 32px	')
+							| Кроме заявок из 214 городов, вы получаете бонус для усиления продаж. Его подберут специалисты с учетом особенностей вашего бизнеса: то, что больше всего нужно вашей компании именно сейчас. 
+					.section-btns
+						.section-btn.section-btnCorparate.weight_400.ab-order.js-apress-order-button.js-orders-callback-link(data-button-type='order_callback' data-company='99572059 ' data-company-id='99572059 ' data-company-name='Пульс цен Онлайн' data-company-name-rest='' data-company-url='https://help.pulscen.ru/' data-params='{"company_id":"99572059 "}' data-statistics='1' data-type='callback')
+							| {crm_analytics:click_link(Хочу «Всю Россия» по старой цене ,#present,network_actions,НК_RTRAFIK_Повышение_цен_ВсяРФ_090322)}
+
+		include ./modules/footer.pug
+	p {crm_analytics:show_page(network_actions,НК_RTRAFIK_Повышение_цен_Регион_090322)}
