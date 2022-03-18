@@ -77,15 +77,7 @@ class Ondata {
             don: '99572059',
             by: '99593226',
         };
-        this.generalClass = {
-            free: 'НК_',
-            pay: 'ПП_',
-            mr: 'МР_',
-        };
-        this.generalTraffic = {
-            latter: 'рассылка',
-            hint: 'подсказка',
-        };
+
         this.generalEvent = {
             free: 'network_actions',
             pay: 'network_actions',
@@ -112,7 +104,7 @@ class Ondata {
         if (window.location.search && window.location.search.length > 0) {
             this.utm = window.location.search
                 .slice(1)
-                .split('-')
+                .split('&')
                 .map(function (param) {
                     return param.split('=');
                 });
@@ -134,14 +126,6 @@ class Ondata {
             _dom.innerHTML = _dom.innerHTML.replace(/_РФ_/gi, this.generalRegion[this.utm.utm_rascal])
 
 
-            if (this.generalClass[this.utm.utm_rascalClass]) {
-                _dom.innerHTML = _dom.innerHTML.replace(/НК_/gi, this.generalClass[this.utm.utm_rascalClass])
-                _dom.innerHTML = _dom.innerHTML.replace(/network_actions/gi, this.generalEvent[this.utm.utm_rascalClass])
-            }
-
-            if (this.generalTraffic[this.utm.utm_rascalTraffik]) {
-                _dom.innerHTML = _dom.innerHTML.replace(/RTRAFIK/gi, this.generalTraffic[this.utm.utm_rascalTraffik])
-            }
 
 
 
