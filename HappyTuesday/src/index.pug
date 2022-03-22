@@ -1,0 +1,60 @@
+<!-- @format -->
+include ./miksins.pug
+
+
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+		title= "оставить товары"
+	body.js-body
+		.main_content
+			header
+				include ./modules/toolbar.pug
+				.header
+					.content
+						picture
+							source(srcset='https://www.pulscen.ru/system/ckeditor_assets/pictures/307532/content_ryba.png' media='(min-width: 580px)')
+							source(srcset='https://www.pulscen.ru/system/ckeditor_assets/pictures/307687/content_ryba.png' media='(min-width: 300px)')
+							img.heading__generalImg(src='mdn-logo-narrow.png' alt='MDN')
+						.header__wrapper
+							
+							.header__text
+								.header__heading.section_h2.accent сегодня
+								.header__heading.section_h1 ВЕЗУЧИЙ ВТОРНИК
+								img.img_fish(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/307631/content_frame_1558.png')
+							.header__img
+								img.imgBG(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/307531/content_ellipse_233.png")
+								.offer
+									p.section_h3 Ваш бонус — #[span.accent скидка 30% ] </br> на весь тариф «Старт»
+									p В чем сила этого тарифа? Название говорит само за себя. Тариф «Старт» подходит компаниям, которые хотят наладить интернет-продажи, но не знают с чего начать и какую стратегию выбрать.
+									+buttonLink('Подробнее о тарифе', 'Подробнее о тарифе', 'section-button', '#tariff')
+			section.tariff#tariff
+				.content 
+					.tariff__heading.section_h3 Тариф «Старт» включает:
+					.tariff__block 
+						.block__item 
+							img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/307690/content_ikonka_1.png", alt="")
+							p.item__heading.section_h4 Продающий сайт
+							p.item__description Оформление под тематику вашего бизнеса, настроены все сервисы, подключен SSL-сертификат для безопасного соединения. Сайт полностью готов к работе.
+						.block__item 
+							img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/307691/content_ikonka_2.png", alt="")
+							p.item__heading.section_h4 Размещение товаров в крупнейшем В2В-каталоге России и стран СНГ
+							p.item__description Пульс цен на рынке 29 лет. За это время скопилась огромная база лояльных покупателей, которые смотрят и заказывают товары в нашем каталоге.
+						.block__item 
+							img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/307692/content_ikonka_3.png", alt="")
+							p.item__heading.section_h4 Личный менеджер поддержки
+							p.item__description Специально выделенный человек будет помогать вам загружать товары и правильно их оформлять. Ваш поможет разобраться с любым вопросом, связанным с работой сайта и сервисом Пульса цен в целом.
+						.block__item 
+							img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/307693/content_ikonka_4.png", alt="")
+							p.item__heading.section_h4 Доступ к базе готовых заказов «Закупки»
+							p.item__description Клиенты, у которых нет времени искать большой перечень товаров поштучно, загружают весь список и алгоритм автоматически подбирает поставщиков. Уведомления о заказе приходит на почту к тем компаниям, кто может закрыть сделку.
+					p.tariff__end Всё уже готово. Подключите тариф «Старт» и начинайте продавать. А сейчас можно забронировать скидку 30%!
+					+button('{crm_analytics:click_link(Хочу тариф «Старт» со скидкой 30%,#order,network_actions,НК_Счастливый_вторник_Хочу_Старт_curData)}', 'Хочу тариф «Старт» со скидкой 30%', 'section-buttonAccent')
+			section.end 
+				.content
+					.offer 
+						p Если у вас остались вопросы или вы хотите получить более подробную информацию про подключение тарифа, закажите бесплатную консультацию и специалист Пульса цен с вами свяжется.
+						+button('{crm_analytics:click_link(Хочу бесплатную консультацию,#order,network_actions,НК_Счастливый_вторник_Консультация_curData)}', 'Хочу бесплатную консультацию', 'section-buttonAccent')
+		include ./modules/footer.pug
+	p {crm_analytics:show_page(network_actions,НК_Счастливый_вторник_curData)}
