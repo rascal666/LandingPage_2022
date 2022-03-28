@@ -1,0 +1,59 @@
+<!-- @format -->
+include ./miksins.pug
+
+
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+		title= "оставить товары"
+	body.js-body
+		.main_content
+			header
+				include ./modules/toolbar.pug
+				.header
+					.content
+						.header__wrapper
+							.header__text
+								img.mobile__img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/313906/content_group_1073.png")
+								.header__heading.section_h1 Как обновить цену товаров на Пульсе цен
+								.offer
+									p Сейчас для большинства клиентов актуальная стоимость - главный фактор покупки. Чтобы не терять клиентов, обновите цены на свои товары. 
+
+									
+							.header__img
+								img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/313906/content_group_1073.png")
+			section.steps
+				.content 
+					.steps__block 
+						.block__line
+						.block__item 
+							.item__number.section_h2 1
+							.item__text Зайдите на свой сайт в раздел ТОВАРЫ И УСЛУГИ
+						.block__item 
+							.item__number.section_h2 2
+							div
+								.item__text Нажмите РЕДАКТИРОВАТЬ ТОВАРЫ
+								img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/314089/content_group_1155.png", alt="")
+						.block__item 
+							.item__number.section_h2 3
+							div
+								.item__text Выберите «Установить розничную цену» или «Установить оптовую цену». Укажите точную цену, диапазон цен или обозначьте возможность договорной стоимости.
+								img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/314080/content_group_1156.png", alt="")
+						.block__item 
+							.item__number.section_h2 4
+							div
+								.item__text Нажмите галочку для сохранения.
+								img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/314086/content_group_1157.png", alt="")
+					.steps__end 
+						.offer 
+							p Сейчас покупатели запасаются материалами и оборудованием, опасаясь «пустых полок».
+							p Не игнорируйте свой сайт на Пульсе цен, он поможет вам получить заказы и прибыль. Сейчас на вашем сайте лимит 10 товаров, но это можно исправить. Чтобы загрузить больше товаров, обратитесь к нашему менеджеру.
+							
+							+button('Хочу загрузить больше товаров', 'Хочу загрузить больше товаров', "section-buttonAccent")
+ 
+
+
+
+		include ./modules/footer.pug
+	p {crm_analytics:show_page(network_actions,НК_Обновить_цены_curData)}

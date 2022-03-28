@@ -1,0 +1,175 @@
+/** @format */
+
+//как использовать - main_content{@include mainContent}
+.main_content {
+	@include mainContent(16px, rgb(255, 255, 255));
+	background: #ffffff;
+	letter-spacing: 0.5px;
+	line-height: 24px;
+}
+
+* {
+	scroll-behavior: smooth;
+}
+
+.header {
+	background: url('https://www.pulscen.ru/system/ckeditor_assets/pictures/313905/content_group_1069.png') no-repeat 100% 100% / 1920px;
+}
+
+.header__wrapper {
+	@include grid(2vw, 6fr 1fr);
+	padding-top: 30px;
+	padding-bottom: 30px;
+
+	.header__text {
+		margin-top: 6vw;
+	}
+	.header__img {
+		position: relative;
+		right: -4vw;
+		img {
+			max-width: 150px;
+			width: 100%;
+		}
+	}
+	.mobile__img {
+		display: none;
+	}
+}
+.offer {
+	margin-top: 30px;
+	max-width: 757px;
+	grid-gap: 16px;
+	display: grid;
+}
+
+.steps {
+	img {
+		max-width: 70%;
+		width: 100%;
+	}
+	padding: var(--section) 0;
+	color: $main_text_color;
+	.steps__block {
+		position: relative;
+		display: grid;
+		grid-gap: 53px;
+	}
+	.block__item {
+		@include grid(24px, auto 1fr);
+		align-items: baseline;
+	}
+	.item__number {
+		width: 80px;
+		height: 80px;
+		background: $corporate_color;
+		border-radius: 50%;
+		display: grid;
+		justify-content: center;
+		align-items: center;
+		color: #fff;
+		z-index: 1;
+		font-weight: 600;
+	}
+	.item__text {
+		margin-bottom: var(--block);
+	}
+	.block__line {
+		height: 100%;
+		width: 5px;
+		background: $corporate_color;
+		position: absolute;
+		left: 38px;
+	}
+	.steps__end {
+		margin-top: var(--section);
+	}
+	.offer {
+		max-width: 100%;
+	}
+}
+
+@media (min-width: 1920px) {
+}
+
+@media (max-width: 1440px) {
+}
+
+@media (max-width: 1366px) {
+	// .header {
+	// 	background: url('https://www.pulscen.ru/system/ckeditor_assets/pictures/313905/content_group_1069.png') no-repeat 100% 100% / 1666px;
+	// }
+}
+
+@media (max-width: 1024px) {
+	:root {
+		--section: 40px;
+		--block: 24px;
+	}
+	.section_h3 {
+		font-size: 18px;
+	}
+	.section-buttonAccent {
+		font-size: 16px;
+	}
+	.header__wrapper {
+		grid-template-columns: 1fr;
+		justify-items: center;
+		padding-bottom: 24px;
+		.header__text {
+			order: 2;
+		}
+		.header__img {
+			display: none;
+			justify-items: center;
+			img {
+				max-width: 40%;
+			}
+		}
+		.mobile__img {
+			display: block;
+			width: 160px;
+			margin: auto;
+		}
+	}
+	.offer {
+		display: grid;
+		max-width: 100%;
+	}
+	.header {
+		background: url(https://www.pulscen.ru/system/ckeditor_assets/pictures/313905/content_group_1069.png) no-repeat 100% 100%/2460px;
+	}
+	.steps {
+		.item__number {
+			width: 50px;
+			height: 50px;
+			font-size: 22px;
+		}
+		.block__line {
+			left: 22px;
+		}
+		img {
+			max-width: 100%;
+			width: 100%;
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	.section_h3 {
+		font-size: 16px;
+	}
+}
+
+@media (max-width: 660px) {
+	.header__wrapper {
+		.mobile__img {
+			width: 109px;
+		}
+	}
+	.toolbar-rascal .toolbar__block .toolbar__icon a {
+		width: 27px;
+	}
+}
+@media (max-width: 480px) {
+}
