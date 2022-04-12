@@ -27,6 +27,8 @@
 	}
 	.header__img {
 		position: relative;
+		display: grid;
+		grid-gap: 16px;
 		// right: -4vw;
 		img {
 			max-width: 100%;
