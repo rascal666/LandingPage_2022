@@ -1,0 +1,123 @@
+<!-- @format -->
+include ./miksins.pug
+
+
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+		title= "оставить товары"
+	body.js-body
+		.main_content
+			header
+				include ./modules/toolbar.pug
+				.header
+					.content
+						.header__wrapper
+							img.header__dg(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/319892/content_vector.png")
+							.header__text
+								.header__heading.section_h1 Бонусы для эффективного продвижения в Яндексе
+								.offer
+									p При подключении или продлении услуг Турбопоиск и/или Турбосети дарим одну из рекламных форм для продвижения товаров в рекламной сети Яндекса (РСЯ) на выбор. 
+									img.mobile__img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/319894/content_group_1000001962.png")
+								+buttonLink('{crm_analytics:click_link(Выбрать бонус,#bonus,want_orders,МР_Программа лояльности_бонусы)}', 'Выбрать бонус', 'section-buttonAccent', 'bonus' )
+							.header__img
+								img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/319894/content_group_1000001962.png")
+			section.sale 
+				.content 
+					.sale__title.section_h2 Усиление ваших продаж #[br] и максимальный приток покупателей
+					.sale__subtitle При подключении или продлении услуг Турбопоиск и/или Турбосети дарим одну из рекламных форм для продвижения товаров в рекламной сети Яндекса (РСЯ) на выбор. 
+					.sale__clients 
+						.clients__item 
+							.item__title.section_h3 Клиенты с поиска Яндекса
+							.item__hint.section_h3(data-title="Продвижение групп товаров в рекламной выдаче на поиске Яндекса") Турбопоиск #[img.item__hint_icon(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/319886/content_group_1000001929.png", alt="" )]
+							.list
+								.list__li Гарантированный рост трафика в 2 раза по выбранным направлениям
+								.list__li Первая страница выдачи
+								.list__li Запуск рекламной кампании в короткие сроки
+						.clients__item 
+							.item__title.section_h3 Клиенты из рекламной сети Яндекса (РСЯ)
+							.item__hint.section_h3(data-title="Продвижение групп товаров в рекламных сетях Яндекса") Турбосети #[img.item__hint_icon(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/319886/content_group_1000001929.png", alt="")]
+							.list
+								.list__li Показ вашего объявления на 1000+ сайтах
+								.list__li Увеличение продаж группы товаров
+								.list__li Запуск рекламной кампании в короткие сроки
+
+					.sale__bonus #[span.fat + Бонус!] Одна из рекламных форм для увеличения количества новых покупателей на выбор:
+					.sale__page
+						a(href="#banner").page__item
+							.item__title Смарт-баннер
+							img.item__icon(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/319888/content_group_1000001932.png")
+						a(href="#remarketing").page__item
+							.item__title Ремаркетинг 
+							img.item__icon(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/319888/content_group_1000001932.png")
+						a(href="#texto").page__item
+							.item__title Текстово-графический баннер
+							img.item__icon(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/319888/content_group_1000001932.png")
+			section.bonus#bonus 
+				.content 
+					.bonus__title.section_h2 Бонус: Рекламная форма на выбор
+					.bonus__subtitle 
+						p Дарим баннер для продвижения товаров на 1000+ сайтах рекламной сети Яндекса (РСЯ).
+						p Для максимального охвата целевой аудитории.
+					.bonus__block 
+						.block__item.block__item_line#banner
+							.item__info 
+								.info__title.section_h3 Смарт-баннер
+								.info__subtitle Меняется автоматически в зависимости от интересов и потребностей каждого посетителя. Видят только целевые клиенты, которые смотрели товары на сайте и/или интересовались похожими в интернете (самая горячая и близкая к покупке аудитория). 
+
+								.list 
+									.list__heading Решает задачи:
+									.list__li привлечь новых клиентов из РСЯ;  
+									.list__li вернуть пользователей, которые ушли с сайта, ничего не заказав;
+									.list__li повысить конверсию (баннер видят только заинтересованные покупатели).
+								+button('{crm_analytics:click_link(Хочу Смарт-баннер в подарок,#order,want_orders,МР_Программа лояльности_Смарт-баннер)}', 'Хочу Смарт-баннер в подарок', 'section-buttonBlue' )
+							.item__img 	
+								img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/319883/content_image_1.png", alt="")
+						.block__item.block__item_line#remarketing
+							.item__info 
+								.info__title.section_h3 Ремаркетинг заинтересованной аудитории Пульса цен
+								.info__subtitle Возвращает ушедших из рубрики Пульса цен покупателей на ваш сайт (они уже готовы купить, а, значит, им легче продать). 
+								.list 
+									.list__heading Решает задачи:
+									.list__li вернуть посетителей из нужной рубрики на Пульсе цен; 
+									.list__li переманить покупателей у конкурентов;
+									.list__li заинтересовать клиентов в момент принятия решения;
+									.list__li повысить узнаваемость, лояльность и доверие к вашей компании;   
+									.list__li быстро и эффективно рассказать целевой аудитории о скидках и новых товарах.   
+								+button('{crm_analytics:click_link(Хочу Ремаркетинг в подарок,#order,want_orders,МР_Программа лояльности_Ремаркетинг)}', 'Хочу Ремаркетинг в подарок', 'section-buttonBlue' )
+							.item__img 	
+								img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/319883/content_image_1.png", alt="")
+						.block__item#texto
+							.item__info 
+								.info__title.section_h3 Текстово-графический баннер  
+								.info__subtitle Полноценно раскрывает продукт, визуально выделяет и захватывает внимание аудитории. Объявление содержит всю информацию для успешных продаж: изображение, название, УТП и призыв к действию. 
+								.list 
+									.list__heading Решает задачи:
+									.list__li усилить продажи; 
+									.list__li охватить новых покупателей; 
+									.list__li привлечь пользователей, которые искали подобный товар;
+									.list__li вернуть «теплых клиентов», которые смотрели вашу продукцию.
+								+button('{crm_analytics:click_link(Хочу Текстово-графический баннер,#order,want_orders,МР_Программа лояльности_ТГБ)}', 'Хочу Текстово-графический баннер', 'section-buttonBlue' )
+							.item__img 	
+								img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/319884/content_image_2.png", alt="")
+			section.end 
+				.content
+					.end__offer
+						p Бонус дается при подключении или продлении услуги #[span.item__hint.fat(data-title="Продвижение групп товаров в рекламных сетях Яндекса") Турбопоиск  #[img.item__hint_icon(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/319886/content_group_1000001929.png", alt="" )]] и/или #[span.item__hint.fat(data-title="Продвижение групп товаров в рекламной выдаче на поиске Яндекса") Турбосети #[img.item__hint_icon(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/319886/content_group_1000001929.png", alt="" )]] 
+						p Подробнее о бонусах и условиях расскажет ваш менеджер. Он же подберет оптимальную рекламную стратегию. 
+					+button('{crm_analytics:click_link(Заказать консультацию,#order,want_orders,МР_Программа лояльности_Консультация)}', 'Заказать консультацию', 'section-buttonAccent' )
+					.end__block
+						.block__line
+						.block__steps
+							.steps__item
+								.item__number.section_h3 1
+								.item__text Подключите или продлите услугу Турбосети и/или Турбопоиск в апреле.
+							.steps__item
+								.item__number.section_h3 2
+								.item__text Подберите со специалистом Пульса цен наиболее эффективную рекламную форму для вашего бизнеса.
+							.steps__item
+								.item__number.section_h3 3
+								.item__text Готово! Обрабатывайте входящие обращения и получайте заказы от новых клиентов.
+		include ./modules/footer.pug
+	p {crm_analytics:show_page(want_orders,МР_Программа лояльности_curData)}

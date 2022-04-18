@@ -1,0 +1,253 @@
+/** @format */
+
+//как использовать - main_content{@include mainContent}
+.main_content {
+	@include mainContent(18px, $main_text_color);
+	background: none;
+}
+header {
+	background: url('https://www.pulscen.ru/system/ckeditor_assets/pictures/319893/content_frame_1000001963.png') no-repeat 2% 0% / cover;
+}
+* {
+	scroll-behavior: smooth;
+}
+.header {
+	position: relative;
+}
+
+.item__hint {
+	cursor: pointer;
+	color: #003b6d;
+	position: relative;
+	img {
+		max-width: 24px;
+		width: 100%;
+	}
+}
+.item__hint:hover::after {
+	content: attr(data-title); /* Выводим текст */
+	position: absolute; /* Абсолютное позиционирование */
+	left: 20%;
+	top: 30%; /* Положение подсказки */
+	z-index: 1; /* Отображаем подсказку поверх других элементов */
+	background: #ffffff;
+	box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+	font-size: 14px; /* Размер текста подсказки */
+	padding: 10px 20px; /* Поля */
+	font-weight: normal;
+	border-radius: 5px;
+}
+
+.header__wrapper {
+	@include grid(2vw, 1.8fr 1fr);
+	padding: var(--section_h1) 0;
+
+	.header__dg {
+		position: absolute;
+		height: 110%;
+		right: 100px;
+		top: -60px;
+		z-index: 0;
+	}
+	.offer {
+		margin-bottom: var(--section_h2);
+		margin-top: 16px;
+		position: relative;
+		z-index: 2;
+		display: grid;
+		grid-gap: 24px;
+	}
+	.header__img {
+		position: relative;
+		right: -4vw;
+		img {
+			max-width: 100%;
+		}
+		position: relative;
+		z-index: 2;
+	}
+	.mobile__img {
+		display: none;
+	}
+	.header__heading {
+		position: relative;
+		z-index: 2;
+	}
+}
+
+.sale {
+	background: #f6f6f6;
+	padding: var(--section) 0;
+	.sale__title {
+		margin-bottom: 16px;
+	}
+	.sale__subtitle {
+		max-width: 1024px;
+	}
+	.sale__clients {
+		@include grid(36px, 1fr 1fr);
+		margin: var(--block) 0;
+	}
+	.sale__page {
+		margin-top: 23px;
+		@include grid(var(--section), repeat(auto-fill, minmax(300px, 1fr)));
+		grid-row-gap: 16px;
+		.page__item {
+			padding: 10px 40px;
+			border: 3px solid $main_text_color;
+			border-radius: 20px;
+			@include grid(16px, auto 1fr);
+			justify-items: flex-end;
+			align-items: center;
+		}
+		.item__icon {
+			position: relative;
+		}
+		.page__item:hover > .item__icon {
+			animation: pageIcon 1s ease;
+			animation-fill-mode: forwards;
+		}
+		@keyframes pageIcon {
+			0% {
+				transform: rotate(0deg);
+				left: 0px;
+			}
+			100% {
+				transform: rotate(360deg);
+				left: 15px;
+			}
+		}
+	}
+}
+
+.bonus {
+	background: #e4eff9;
+	padding: var(--section) 0;
+	.bonus__title {
+		margin-bottom: 16px;
+	}
+	.bonus__block {
+		.info__title {
+			margin-bottom: 16px;
+		}
+		.block__item {
+			@include grid(16px, 1fr 1fr);
+			justify-items: end;
+			margin-top: var(--block);
+		}
+		.block__item_line {
+			padding-bottom: var(--block);
+			border-bottom: 0.5px solid #0d55903d;
+		}
+		.item__img {
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+	.list {
+		margin-top: var(--block);
+	}
+}
+
+.end {
+	background: #f6f6f6;
+	padding: var(--section) 0;
+	.end__offer {
+		display: grid;
+		grid-gap: 16px;
+		margin-bottom: 24px;
+	}
+	.end__block {
+		position: relative;
+		margin-top: calc(var(--block) + 10px);
+		.block__line {
+			border: 0.5px dashed #003a6dad;
+			position: absolute;
+			left: 5px;
+			top: 6px;
+			height: 94%;
+		}
+		.steps__item {
+			@include grid(16px, auto 1fr);
+			align-items: center;
+			margin-bottom: var(--block);
+			z-index: 1;
+			position: relative;
+			.item__number {
+				background: #f6f6f6;
+			}
+		}
+	}
+}
+
+@media (min-width: 1920px) {
+}
+
+@media (max-width: 1440px) {
+}
+
+@media (max-width: 1366px) {
+}
+
+@media (max-width: 1024px) {
+	:root {
+		--section_h1: 60px;
+		--section: 40px;
+		--block: 24px;
+	}
+	.header__dg {
+		display: none;
+	}
+	.header__wrapper {
+		grid-template-columns: 1fr;
+		justify-items: center;
+		.header__text {
+			order: 2;
+		}
+		.header__img {
+			display: none;
+			justify-items: center;
+			img {
+				max-width: 40%;
+			}
+		}
+		.mobile__img {
+			display: block;
+			max-width: 43%;
+			margin: auto;
+		}
+	}
+	.offer {
+		display: grid;
+		max-width: 100%;
+	}
+	.bonus {
+		.bonus__block {
+			.block__item {
+				grid-template-columns: 1fr;
+				justify-items: center;
+			}
+		}
+	}
+}
+
+@media (max-width: 800px) {
+	.sale {
+		.sale__clients {
+			grid-template-columns: 1fr;
+			grid-gap: 16px;
+		}
+	}
+}
+
+@media (max-width: 660px) {
+	.main_content {
+		font-size: 14px;
+	}
+}
+@media (max-width: 480px) {
+	.header__wrapper .mobile__img {
+		max-width: 80%;
+	}
+}
