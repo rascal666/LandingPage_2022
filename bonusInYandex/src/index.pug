@@ -72,8 +72,29 @@ html(lang="ru")
 									.list__li вернуть пользователей, которые ушли с сайта, ничего не заказав;
 									.list__li повысить конверсию (баннер видят только заинтересованные покупатели).
 								+button('{crm_analytics:click_link(Хочу Смарт-баннер в подарок,#order,want_orders,МР_Программа лояльности_Смарт-баннер)}', 'Хочу Смарт-баннер в подарок', 'section-buttonBlue' )
-							.item__img 	
-								img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/319883/content_image_1.png", alt="")
+							.item__img
+								.swiper.slider-r
+									// Additional required wrapper
+									.swiper-wrapper
+										// Slides
+										.swiper-slide
+											img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/321009/content_image_7.png", alt="")
+										.swiper-slide 
+											img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/321010/content_group_1000001969.png", alt="")
+										.swiper-slide 
+											img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/321011/content_group_1000001968.png", alt="")
+										.swiper-slide 
+											img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/321013/content_group_1000001976.png", alt="")
+										.swiper-slide 
+											img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/321016/content_group_1000001972.png", alt="")
+										.swiper-slide 
+											img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/321018/content_group_1000001971.png", alt="")
+									// If we need navigation buttons
+									.button-prev
+										img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/320999/content_group_1000001976.png", alt="")
+									.button-next 
+										img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/320996/content_group_1000001973.png", alt="")
+								
 						.block__item.block__item_line#remarketing
 							.item__info 
 								.info__title.section_h3 Ремаркетинг заинтересованной аудитории Пульса цен
@@ -87,7 +108,19 @@ html(lang="ru")
 									.list__li быстро и эффективно рассказать целевой аудитории о скидках и новых товарах.   
 								+button('{crm_analytics:click_link(Хочу Ремаркетинг в подарок,#order,want_orders,МР_Программа лояльности_Ремаркетинг)}', 'Хочу Ремаркетинг в подарок', 'section-buttonBlue' )
 							.item__img 	
-								img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/319883/content_image_1.png", alt="")
+								.swiper.slider-r
+									// Additional required wrapper
+									.swiper-wrapper
+										// Slides
+										.swiper-slide 
+											img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/321019/content_group_1000001963.png", alt="")
+										.swiper-slide 
+											img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/321020/content_group_1000001967.png", alt="")
+									// If we need navigation buttons
+									.button-prev
+										img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/320999/content_group_1000001976.png", alt="")
+									.button-next 
+										img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/320996/content_group_1000001973.png", alt="")
 						.block__item#texto
 							.item__info 
 								.info__title.section_h3 Текстово-графический баннер  
@@ -99,7 +132,21 @@ html(lang="ru")
 									.list__li привлечь пользователей, которые искали подобный товар.
 								+button('{crm_analytics:click_link(Хочу Текстово-графический баннер,#order,want_orders,МР_Программа лояльности_ТГБ)}', 'Хочу Текстово-графический баннер', 'section-buttonBlue' )
 							.item__img 	
-								img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/319884/content_image_2.png", alt="")
+								.swiper.slider-r
+									// Additional required wrapper
+									.swiper-wrapper
+										// Slides
+										.swiper-slide 
+											img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/321021/content_group_1000001964.png", alt="")
+										.swiper-slide 
+											img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/321022/content_group_1000001965.png", alt="")
+										.swiper-slide 
+											img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/321024/content_group_1000001966.png", alt="")
+									// If we need navigation buttons
+									.button-prev
+										img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/320999/content_group_1000001976.png", alt="")
+									.button-next 
+										img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/320996/content_group_1000001973.png", alt="")
 			section.end 
 				.content
 					.end__offer
@@ -119,4 +166,4 @@ html(lang="ru")
 								.item__number.section_h3 3
 								.item__text Готово! Обрабатывайте входящие обращения и получайте заказы от новых клиентов.
 		include ./modules/footer.pug
-	p {crm_analytics:show_page(want_orders,МР_Программа лояльности_curData)}
+	//- p {crm_analytics:show_page(want_orders,МР_Программа лояльности_curData)}
