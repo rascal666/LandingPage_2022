@@ -3,7 +3,6 @@
 //как использовать - main_content{@include mainContent}
 .main_content {
 	@include mainContent(16px, rgb(255, 255, 255));
-	
 
 	font-weight: 500;
 }
@@ -24,13 +23,12 @@
 	font-weight: 600;
 	cursor: pointer;
 }
-header{
-	background: linear-gradient(183.93deg, #77C0FF -13.67%, #0379CF 89.3%);
+header {
+	background: linear-gradient(183.93deg, #77c0ff -13.67%, #0379cf 89.3%);
 }
 .header {
 	padding-bottom: var(--section_h1);
 	position: relative;
-	
 }
 .header__wrapper {
 	@include grid(2vw, 1.3fr 1fr);
@@ -102,17 +100,19 @@ header{
 		margin: calc(var(--section) - 20px) 0;
 		max-width: 1040px;
 	}
+	.sectionWrapper__offer_end {
+		margin-top: 0;
+	}
 	.sectionWrapper__block {
-		@include grid(16px, 1fr 1fr);
+		@include grid(10vw, 1fr 1fr);
 		align-items: center;
 		justify-items: end;
 		.list {
 			margin-bottom: 0;
 		}
 	}
-	.sectionWrapper__block_left{
+	.sectionWrapper__block_left {
 		justify-items: baseline;
-		
 	}
 }
 .sectionCard {
@@ -143,15 +143,24 @@ header{
 }
 
 @media (min-width: 1920px) {
+	.sectionWrapper .sectionWrapper__block {
+		grid-gap: 16px;
+	}
 }
 
 @media (max-width: 1440px) {
 }
 
 @media (max-width: 1366px) {
+	header {
+		height: 100%;
+	}
 }
 
 @media (max-width: 1024px) {
+	header {
+		height: fit-content;
+	}
 	:root {
 		--section_h1: 60px;
 		--section: 40px;

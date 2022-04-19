@@ -60,8 +60,13 @@ module.exports = {
     plugins: [
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
-            filename: "index.html",
+            filename: "index-rb.html",
             template: './src/index.pug',
+            inject: 'body'
+        }),
+        new HtmlWebpackPlugin({
+            filename: "index-rf.html",
+            template: './src/index_rf.pug',
             inject: 'body'
         }),
         new HtmlWebpackPugPlugin(),
