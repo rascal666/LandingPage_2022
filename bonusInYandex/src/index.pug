@@ -150,7 +150,7 @@ html(lang="ru")
 			section.end 
 				.content
 					.end__offer
-						p Бонус дается при подключении или продлении услуги #[span.item__hint.fat(data-title="Продвижение групп товаров в рекламных сетях Яндекса") Турбопоиск  #[img.item__hint_icon(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/319886/content_group_1000001929.png", alt="" )]] и/или #[span.item__hint.fat(data-title="Продвижение групп товаров в рекламной выдаче на поиске Яндекса") Турбосети #[img.item__hint_icon(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/319886/content_group_1000001929.png", alt="" )]] 
+						p Бонус дается при подключении или продлении услуги #[span.item__hint.fat(data-title="Продвижение групп товаров в рекламной выдаче на поиске Яндекса") Турбопоиск  #[img.item__hint_icon(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/319886/content_group_1000001929.png", alt="" )]] и/или #[span.item__hint.fat(data-title="Продвижение групп товаров в рекламных сетях Яндекса") Турбосети #[img.item__hint_icon(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/319886/content_group_1000001929.png", alt="" )]] 
 						p Подробнее о бонусах и условиях расскажет ваш менеджер. Он же подберет оптимальную рекламную стратегию. 
 					+button('{crm_analytics:click_link(Заказать консультацию,#order,want_orders,МР_Программа лояльности_Консультация)}', 'Заказать консультацию', 'section-buttonAccent' )
 					.end__block
@@ -166,4 +166,4 @@ html(lang="ru")
 								.item__number.section_h3 3
 								.item__text Готово! Обрабатывайте входящие обращения и получайте заказы от новых клиентов.
 		include ./modules/footer.pug
-	//- p {crm_analytics:show_page(want_orders,МР_Программа лояльности_curData)}
+	p {crm_analytics:show_page(want_orders,МР_Программа лояльности_curData)}
