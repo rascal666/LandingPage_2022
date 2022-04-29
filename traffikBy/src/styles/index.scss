@@ -60,7 +60,7 @@ header {
 	}
 }
 .offer {
-	margin-top: 30px;
+	margin-top: 56px;
 	max-width: 520px;
 	grid-gap: 16px;
 	display: grid;
@@ -153,12 +153,18 @@ header {
 
 @media (max-width: 1366px) {
 	header {
-		height: 100%;
+		height: 100vh;
+	}
+	.header {
+		height: 80%;
 	}
 }
 
 @media (max-width: 1024px) {
 	header {
+		height: fit-content;
+	}
+	.header {
 		height: fit-content;
 	}
 	:root {
