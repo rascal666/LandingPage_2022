@@ -35,6 +35,7 @@ class Ondata {
         this.generalNumbers = {
             kz: '8 10 800 1000 91 91',
             free: '8 800 234 43 10',
+            freeEventNo: '8 800 234 43 10',
             pay: '8 800 100 91 91',
             ua: '+380 (89) 120 50 46',
             don: '+380 (89) 120 50 46',
@@ -43,6 +44,7 @@ class Ondata {
         this.generalNumbersSok = {
             kz: 'tel:81080010009191',
             free: 'tel:88002344310',
+            freeEventNo: 'tel:88002344310',
             pay: 'tel:88001009191',
             ua: 'tel:380891205046',
             don: 'tel:380891205046',
@@ -52,6 +54,7 @@ class Ondata {
         this.generalNote = {
             kz: 'Казахстана',
             free: 'РФ',
+            freeEventNo: 'РФ',
             pay: 'РФ',
             ua: 'Украины',
             don: 'Донецка и Луганска',
@@ -61,6 +64,7 @@ class Ondata {
         this.generalEvent = {
             kz: '_KZ_',
             free: '_РФ_',
+            freeEventNo: '_РФ_',
             pay: '_РФ_',
             ua: '_YA_',
             don: '_ДНР&ЛНР_',
@@ -70,6 +74,7 @@ class Ondata {
         this.generalId = {
             kz: '99572059',
             free: '99572059',
+            freeEventNo: '99572059',
             pay: '99560299',
             ua: '99572059',
             don: '99572059',
@@ -119,6 +124,8 @@ class Ondata {
                 const _item__by = document.querySelectorAll('.item-by');
                 const _item__ua = document.querySelector('.item-ua');
                 const _blocks__kz = document.querySelector('.blocks-kz ');
+                const _fff = document.querySelector('.fff');
+
                 // если нашли этот элемент то вставляем в него телефон из списка
                 if (_numder) {
                     _numder.forEach(element => {
@@ -141,9 +148,8 @@ class Ondata {
                     _item__kz.style.display = 'none'
                     _blocks__kz.style.gridTemplateColumns = "repeat(auto-fit, minmax(300px, 1fr))"
                 }
-                if (this.utm.utm_rascal == 'ua' || this.utm.utm_rascal == 'don') {
-                    _item__ua.style.display = 'none'
-                    _blocks__kz.style.gridTemplateColumns = "repeat(auto-fit, minmax(300px, 1fr))"
+                if (this.utm.utm_rascal == 'freeEventNo') {
+                    _fff.style.display = 'none'
 
                 }
 
@@ -184,21 +190,8 @@ const onData = new Ondata('.js-body');
 let re = '/50% на первые места в каталоге/gi'
 let by = 'Хочу +2 месяца'
 // пользуешься созданным классом
-onData.setInnerText("by", /2 месяца повышенного тарифа/gi, "1 месяц повышенного тарифа");
-onData.setInnerText("by", /2 любых месяца на более эффективном тарифе. Максимальное усиление продаж!/gi, "Любой месяц на более эффективном тарифе. Максимальное усиление продаж!");
-onData.setInnerText("by", /любой подарок/gi, "бонус");
-onData.setInnerText("by", /_Сезон_/gi, "_ПБ_");
-onData.setInnerText("by", /2 бонусных месяца на вашем тарифе. Без дополнительных вложений!/gi, "Самые конверсионные места. Ваши товары увидят абсолютно все посетители рубрики!");
-onData.setInnerText("by", /2 дополнительных месяца размещения/gi, "до -50% на первые места в каталоге");
-onData.setInnerText("by", by, "Хочу быть первым");
+onData.setInnerText("freeEventNo", /НК_РФ_Цифры_curData/gi, "");
 
-onData.setInnerText("ua", /Дополнительный город/gi, "Продвижение в регионы");
-onData.setInnerText("ua", /Хочу город/gi, "Хочу продвижение в регионы");
-onData.setInnerText("ua", /1 месяц размещения в дополнительном городе. Увеличение заказов и заявок!/gi, "1 месяц размещения в дополнительном регионе по вашему выбору.Увеличение заказов и заявок!");
-
-onData.setInnerText("don", /Дополнительный город/gi, "Продвижение в регионы");
-onData.setInnerText("don", /Хочу город/gi, "Хочу продвижение в регионы");
-onData.setInnerText("don", /1 месяц размещения в дополнительном городе. Увеличение заказов и заявок!/gi, "1 месяц размещения в дополнительном регионе по вашему выбору.Увеличение заказов и заявок!");
 
 
 

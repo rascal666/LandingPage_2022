@@ -134,6 +134,12 @@ header {
 		margin: var(--block) 0;
 	}
 }
+.block__item {
+	img {
+		max-width: 100%;
+		width: 100%;
+	}
+}
 .block_white {
 	background: #fff;
 	color: $main_text_color;
