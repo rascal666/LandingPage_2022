@@ -34,7 +34,7 @@ class Ondata {
         // номера телефонов стран
         this.generalNumbers = {
             kz: '8 10 800 1000 91 91',
-            free: '8 800 234 43 10',
+            free: '8 800 234 43 10', freeDoble: '8 800 234 43 10',
             pay: '8 800 100 91 91',
             ua: '+380 (89) 120 50 46',
             don: '+380 (89) 120 50 46',
@@ -43,7 +43,7 @@ class Ondata {
         };
         this.generalNumbersSok = {
             kz: 'tel:81080010009191',
-            free: 'tel:88002344310',
+            free: 'tel:88002344310', freeDoble: 'tel:88002344310',
             pay: 'tel:88001009191',
             ua: 'tel:380891205046',
             don: 'tel:380891205046',
@@ -54,7 +54,7 @@ class Ondata {
         // подписи к номерам телефонов стран
         this.generalNote = {
             kz: 'Казахстана',
-            free: 'РФ',
+            free: 'РФ', freeDoble: 'РФ',
             pay: 'РФ',
             bonus: 'РФ',
             ua: 'Украины',
@@ -64,7 +64,7 @@ class Ondata {
         // события для разных стран
         this.generalEvent = {
             kz: '_KZ_',
-            free: '_РФ_',
+            free: '_РФ_', freeDoble: '_РФ_',
             pay: '_РФ_',
             bonus: '_РФ_',
             ua: '_YA_',
@@ -74,7 +74,7 @@ class Ondata {
         // настройка id под страны
         this.generalId = {
             kz: '99572059',
-            free: '99572059',
+            free: '99572059', freeDoble: '99572059',
             pay: '99560299',
             bonus: '99560299',
             ua: '99572059',
@@ -191,6 +191,9 @@ let re = '/50% на первые места в каталоге/gi'
 let by = 'Хочу +2 месяца'
 // пользуешься созданным классом
 onData.setInnerText("bonus", /_ЦЕНЫ/gi, "_БОНУС");
+onData.setInnerText("free", /ПП_/gi, "НК_");
+onData.setInnerText("freeDoble", /ПП_/gi, "НК_");
+onData.setInnerText("freeDoble", /Ваш личный менеджер перезвонит и расскажет подробнее о мерах поддержки бизнеса от Пульса цен./gi, "Ваш личный менеджер перезвонит и расскажет подробнее про ТОПовые бонусы.");
 
 
 
