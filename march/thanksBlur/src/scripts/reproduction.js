@@ -192,7 +192,10 @@ let by = 'Хочу +2 месяца'
 // пользуешься созданным классом
 onData.setInnerText("bonus", /_ЦЕНЫ/gi, "_БОНУС");
 onData.setInnerText("free", /ПП_/gi, "НК_");
-onData.setInnerText("freeDoble", /ПП_/gi, "НК_");
+onData.setInnerText("freeDoble", /ПП_/gi, "MP_");
+onData.setInnerText("freeDoble", /network_actions/gi, "want_orders");
+onData.setInnerText("freeDoble", /Меры_поддержки_ЦЕНЫ/gi, "Общая_Консультация_Бонусы");
+onData.setInnerText("freeDoble", /Меры поддержки_ЦЕНы_консультация/gi, "Общая_Консультация_Бонусы");
 onData.setInnerText("freeDoble", /Ваш личный менеджер перезвонит и расскажет подробнее о мерах поддержки бизнеса от Пульса цен./gi, "Ваш личный менеджер перезвонит и расскажет подробнее про ТОПовые бонусы.");
 
 
