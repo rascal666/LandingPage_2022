@@ -1,0 +1,249 @@
+<!-- @format -->
+include ./miksins.pug
+
+
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+		title= "Больше клиентов из других городов"
+	body.js-body
+		.main_content
+			header
+				include ./modules/toolbar.pug
+				.header
+					.content
+						.header__wrapper
+							.header__text
+								.header__heading.section_h1 Больше клиентов из других городов
+								.offer
+									img.mobile__img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/331364/content_group_1000002104.png")
+									p Тарифы «Вся Россия» и «Региональные кластеры» — легкий и быстрый способ расширить рынок сбыта.
+									p Посмотрите подробные описания.
+
+									.section-btns
+										+buttonLink('{crm_analytics:click_link(Вся Россия,#russia,network_actions,ПП_ДеньРФ_Вся_Россия)}', 'Вся Россия', "section-button ", 'russia')
+										+buttonLink('{crm_analytics:click_link(Региональные кластеры,#cluster,network_actions,ПП_ДеньРФ_Кластеры)}', 'Региональные кластеры', "section-button ", 'cluster')
+							.header__img
+								img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/331364/content_group_1000002104.png")
+				section.working#russia
+					.content 
+						.working__title.section_h2 Тариф «Вся Россия»
+						.sectionOffer
+							p Быстрый и полный захват российского рынка. Увеличение заявок и продаж. Повышение узнаваемости компании и доверия покупателей.
+						.banners 
+							.banners__task 
+								.task__img 
+									img.wow.pulse(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/331365/content_group_1000002125.png", alt="")
+								.task__block.wow.bounceInRight( data-wow-delay="0.5s")
+									p.block__title.section_h3 Преимущества тарифа «Вся Россия»: 
+									.list
+										.list__li Размещение товаров на площадках в  #[span.fat.subtitle-button.button(rel='popupAll') 214 городах], включая миллионники;
+										.list__li Проработка товарного каталога;
+										.list__li  Увеличение лимита товаров до 10 000;
+										.list__li Ручной поиск характеристик товара до 500 товаров;
+										.list__li Доступ к «Закупкам». Это сервис готовых заказов на ваши товары.
+									+button('{crm_analytics:click_link(Хочу продавать по всей России,#order,network_actions,ПП_ДеньРФ_Вся_Россия_заявка)}', 'Хочу продавать по всей России', "section-button")
+				section.cluster#cluster
+					.content 
+						p.section_h2 Тариф «Региональные кластеры»
+						.sectionOffer
+							p Быстрый выход на региональные рынки. Размещение товаров на приоритетных позициях каталога в регионах,  которые нужны именно вам.
+						.claster
+							.claster_item
+								#button3.button.item__btn(rel='popapFCO')
+									p.heading.button(rel='popapFCO') {crm_analytics:click_link(Москва и ЦФО,#klaster,network_actions,ПП_ДеньРФ_Кластеры_ЦФО)}
+									p.subtitle-sity 64 города
+									p.subtitle-button.button(rel='popapFCO')
+										| {crm_analytics:click_link(состав городов,#klaster,network_actions,ПП_ДеньРФ_Кластеры_ЦФО)}
+								.modal-wrapper
+									.modal-wrapper-block(data-popup='popapFCO')
+										.modal-block
+											img.modal-close(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195450/content_union_3.png' alt='')
+											.claster__city.FCO
+							.claster_item
+								#button3.button.item__btn(rel='popapUralo_Sibirskiy')
+									p.heading.button(rel='popapUralo_Sibirskiy') {crm_analytics:click_link(Урало-Сибирский,#klaster,network_actions,ПП_ДеньРФ_Урал-Сибирь)}
+									p.subtitle-sity 14 городов
+									p.subtitle-button.button(rel='popapUralo_Sibirskiy')
+										| {crm_analytics:click_link(состав городов,#klaster,network_actions,ПП_ДеньРФ_Урал-Сибирь)}
+								.modal-wrapper
+									.modal-wrapper-block(data-popup='popapUralo_Sibirskiy')
+										.modal-block
+											img.modal-close(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195450/content_union_3.png' alt='')
+											.claster__city.Uralo_Sibirskiy
+							.claster_item
+								#button10.button.item__btn(rel='popapSibir')
+									p.heading.button(rel='popapSibir') {crm_analytics:click_link(Сибирь,#klaster,network_actions,ПП_ДеньРФ_Кластеры_Сибирь)}
+									p.subtitle-sity 17 городов
+									p.subtitle-button.button(rel='popapSibir')
+										| {crm_analytics:click_link(состав городов,#klaster,network_actions,ПП_ДеньРФ_Кластеры_Сибирь)}
+								.modal-wrapper
+									.modal-wrapper-block(data-popup='popapSibir')
+										.modal-block
+											img.modal-close(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195450/content_union_3.png' alt='')
+											.claster__city.Sibir
+							.claster_item
+								#button10.button.item__btn(rel='popapUrfo')
+									p.heading.button(rel='popapUrfo') {crm_analytics:click_link(УРФО,#klaster,network_actions,ПП_ДеньРФ_Кластеры_УРФО)}
+									p.subtitle-sity 18 городов
+									p.subtitle-button.button(rel='popapUrfo')
+										| {crm_analytics:click_link(состав городов,#klaster,network_actions,ПП_ДеньРФ_Кластеры_УРФО)}
+								.modal-wrapper
+									.modal-wrapper-block(data-popup='popapUrfo')
+										.modal-block
+											img.modal-close(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195450/content_union_3.png' alt='')
+											.claster__city.UrFO
+							.claster_item
+								#button9.button.item__btn(rel='popupSevero_Zapad')
+									p.heading.button(rel='popupSevero_Zapad')
+										| {crm_analytics:click_link(Северо-Западный ,#klaster,network_actions,ПП_ДеньРФ_Кластеры_СЗ)}
+									p.subtitle-sity 21 город
+									p.subtitle-button.button(rel='popupSevero_Zapad')
+										| {crm_analytics:click_link(состав городов ,#klaster,network_actions,ПП_ДеньРФ_Кластеры_СЗ)}
+								.modal-wrapper
+									.modal-wrapper-block(data-popup='popupSevero_Zapad')
+										.modal-block
+											img.modal-close(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195450/content_union_3.png' alt='')
+											.claster__city.Severo_Zapad
+							.claster_item
+								#button6.button.item__btn(rel='popupVostok')
+									p.heading.button(rel='popupVostok')
+										| {crm_analytics:click_link(Дальний Восток,#klaster,network_actions,ПП_ДеньРФ_Кластеры_Д.Восток)}
+									p.subtitle-sity 9 городов
+									p.subtitle-button.button(rel='popupVostok')
+										| {crm_analytics:click_link(состав городов,#klaster,network_actions,ПП_ДеньРФ_Кластеры_Д.Восток)}
+								.modal-wrapper
+									.modal-wrapper-block(data-popup='popupVostok')
+										.modal-block
+											img.modal-close(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195450/content_union_3.png' alt='')
+											.claster__city.Vostok
+							.claster_item
+								.item__new New
+								#button6.button.item__btn(rel='popupKrasnoyarsk')
+									p.heading.button(rel='popupKrasnoyarsk')
+										| {crm_analytics:click_link(Красноярск+,#klaster,network_actions,ПП_ДеньРФ_Кластеры_Красноярск+)}
+									p.subtitle-sity 18 городов
+									p.subtitle-button.button(rel='popupKrasnoyarsk')
+										| {crm_analytics:click_link(состав городов,#klaster,network_actions,ПП_ДеньРФ_Кластеры_Красноярск+)}
+								.modal-wrapper
+									.modal-wrapper-block(data-popup='popupKrasnoyarsk')
+										.modal-block
+											img.modal-close(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195450/content_union_3.png' alt='')
+											.claster__city.krasnoyarsk
+							.claster_item
+								#button6.button.item__btn(rel='popupEKB')
+									p.heading.button(rel='popupEKB')
+										| {crm_analytics:click_link(Екатеринбург + ХМАО ЯНАО,#klaster,network_actions,ПП_ДеньРФ_Кластеры_Екб-Хмао-Янао)}
+									p.subtitle-sity 15 городов
+									p.subtitle-button.button(rel='popupEKB')
+										| {crm_analytics:click_link(состав городов,#klaster,network_actions,ПП_ДеньРФ_Кластеры_Екб-Хмао-Янао)}
+								.modal-wrapper
+									.modal-wrapper-block(data-popup='popupEKB')
+										.modal-block
+											img.modal-close(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195450/content_union_3.png' alt='')
+											.claster__city.EKB
+							.claster_item
+								#button6.button.item__btn(rel='popupTatarstan')
+									p.heading.button(rel='popupTatarstan')
+										| {crm_analytics:click_link(Татарстан,#klaster,network_actions,ПП_ДеньРФ_Кластеры_Татарстан)}
+									p.subtitle-sity 5 городов
+									p.subtitle-button.button(rel='popupTatarstan')
+										| {crm_analytics:click_link(состав городов,#klaster,network_actions,ПП_ДеньРФ_Кластеры_Татарстан)}
+								.modal-wrapper
+									.modal-wrapper-block(data-popup='popupTatarstan')
+										.modal-block
+											img.modal-close(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195450/content_union_3.png' alt='')
+											.claster__city.Tatarstan
+							.claster_item
+								.item__new New
+								#button6.button.item__btn(rel='popupBashkortostan')
+									p.heading.button(rel='popupBashkortostan')
+										| {crm_analytics:click_link(Башкортостан,#klaster,network_actions,ПП_ДеньРФ_Кластеры_Башкортостан)}
+									p.subtitle-sity 5 городов
+									p.subtitle-button.button(rel='popupBashkortostan')
+										| {crm_analytics:click_link(состав городов,#klaster,network_actions,ПП_ДеньРФ_Кластеры_Башкортостан)}
+								.modal-wrapper
+									.modal-wrapper-block(data-popup='popupBashkortostan')
+										.modal-block
+											img.modal-close(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195450/content_union_3.png' alt='')
+											.claster__city.Bashkortostan
+							.claster_item
+								#button6.button.item__btn(rel='popupErmak')
+									p.heading.button(rel='popupErmak')
+										| {crm_analytics:click_link(Ермак,#klaster,network_actions,ПП_ДеньРФ_Кластеры_Ермак)}
+									p.subtitle-sity 19 городов
+									p.subtitle-button.button(rel='popupErmak')
+										| {crm_analytics:click_link(состав городов,#klaster,network_actions,ПП_ДеньРФ_Кластеры_Ермак)}
+								.modal-wrapper
+									.modal-wrapper-block(data-popup='popupErmak')
+										.modal-block
+											img.modal-close(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195450/content_union_3.png' alt='')
+											.claster__city.Ermak
+							.claster_item
+								#button6.button.item__btn(rel='popupPovolzie')
+									p.heading.button(rel='popupPovolzie')
+										| {crm_analytics:click_link(Поволжье,#klaster,network_actions,ПП_ДеньРФ_Кластеры_Поволжье)}
+									p.subtitle-sity 22 города
+									p.subtitle-button.button(rel='popupPovolzie')
+										| {crm_analytics:click_link(состав городов,#klaster,network_actions,ПП_ДеньРФ_Кластеры_Поволжье)}
+								.modal-wrapper
+									.modal-wrapper-block(data-popup='popupPovolzie')
+										.modal-block
+											img.modal-close(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195450/content_union_3.png' alt='')
+											.claster__city.Povolzie
+							.claster_item
+								#button6.button.item__btn(rel='popupUg_Krim')
+									.item__new New
+									p.heading.button(rel='popupUg_Krim')
+										| {crm_analytics:click_link(Юг,#klaster,network_actions,ПП_ДеньРФ_Кластеры_Юг)}
+									p.subtitle-sity 36 городов
+									p.subtitle-button.button(rel='popupUg_Krim')
+										| {crm_analytics:click_link(состав городов,#klaster,network_actions,ПП_ДеньРФ_Кластеры_Юг)}
+								.modal-wrapper
+									.modal-wrapper-block(data-popup='popupUg_Krim')
+										.modal-block
+											img.modal-close(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195450/content_union_3.png' alt='')
+											.claster__city.ug_Krim
+							.claster_item
+								#button6.button.item__btn(rel='popupCrimea')
+									p.heading.button(rel='popupCrimea')
+										| {crm_analytics:click_link(Крым,#klaster,network_actions,ПП_ДеньРФ_Кластеры_Крым)}
+									p.subtitle-sity 5 городов
+									p.subtitle-button.button(rel='popupCrimea')
+										| {crm_analytics:click_link(состав городов,#klaster,network_actions,ПП_ДеньРФ_Кластеры_Крым)}
+								.modal-wrapper
+									.modal-wrapper-block(data-popup='popupCrimea')
+										.modal-block
+											img.modal-close(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195450/content_union_3.png' alt='')
+											.claster__city.Crimea
+							.claster_item
+								#button6.button.item__btn(rel='popupAll')
+									p.heading.button(rel='popupAll')
+										| {crm_analytics:click_link(Вся Россия,#klaster,network_actions,ПП_ДеньРФ_Вся_Россия)}
+									p.subtitle-sity 214 городов
+									p.subtitle-button.button(rel='popupAll')
+										| {crm_analytics:click_link(состав городов,#klaster,network_actions,ПП_ДеньРФ_Вся_Россия)}
+								.modal-wrapper
+									.modal-wrapper-block(data-popup='popupAll')
+										.modal-block
+											img.modal-close(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195450/content_union_3.png' alt='')
+											.claster__city.All
+						.wrapperColl
+							.wrapperColl__text
+								.list
+									.list__title.section_h4.fat.section_h3 Преимущества тарифа: 
+									.list__li.wow.fadeInLeft Усиление продаж в соседних регионах;
+									.list__li.wow.fadeInLeft Размещение товаров в дополнительных городах на приоритетном тарифе «Серебро»;
+									.list__li.wow.fadeInLeft Увеличение лимита товаров до 10 000; 
+									.list__li.wow.fadeInLeft Размещение товаров только в нужных городах;
+									.list__li.wow.fadeInLeft Повышение узнаваемости компании и доверия клиентов;
+									.list__li.wow.fadeInLeft Готовые заявки сервиса «Закупки» с выбранных регионов.
+								.sectionOffer
+									p Получайте клиентов с нужных городов быстро и легко! За подробностями акции обращайтесь к своему менеджеру.  
+								+button('{crm_analytics:click_link(Хочу продавать в другой регион,#order,network_actions,ПП_ДеньРФ_Кластеры_заявка)}', 'Хочу продавать в другой регион', "section-button")
+							.wrapperColl__img 
+								img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/331366/content_frame_1000002126.png", alt="")
+								//- p.img__span *количество товарных групп для продвижения зависит от выбранного пакета внутри тарифа «Региональные кластеры».
+		include ./modules/footer.pug
+	p {crm_analytics:show_page(network_actions,ПП_ДеньРФ)}
