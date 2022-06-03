@@ -1,0 +1,99 @@
+<!-- @format -->
+include ./miksins.pug
+
+
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+		title= "Больше клиентов из других городов"
+	body.js-body
+		.main_content
+			header
+				include ./modules/toolbar.pug
+				.header
+					.content
+						.header__wrapper
+							.header__text
+								.header__heading.section_h1 Как быстро получить клиентов с поиска Яндекса
+								.offer
+									img.mobile__img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/331932/content_group_1000002136.png")
+									p.fat Услуга «Турбопоиск» на Пульсе цен. Что это такое, какие задачи решает и какие результаты приносит.
+									p Поисковая выдача в Яндексе делится на органическую (с помощью проработанного SEO) и рекламную (за деньги).
+									p Чтобы сайт попал на первую страницу органической выдачи, нужно несколько месяцев. А при высокой конкуренции в нише это практически невозможно. 
+									p Что делать, если клиенты из Яндекса нужны уже сейчас? - Занять места рекламной выдачи с помощью услуги «Турбопоиск».
+
+									+buttonLink('{crm_analytics:click_link(Смотреть кейсы,#cases,want_orders,МР_Турбопоиск_Кейсы)}', 'Смотреть кейсы', "section-button ", 'cases')
+							.header__img
+								img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/331932/content_group_1000002136.png")
+			section.working#cases
+				.content 
+					.working__title.section_h2 Что такое «Турбопоиск» на Пульсе цен
+					.sectionOffer
+						p Турбопоиск - контекстная реклама на поиске в Яндексе, настроенная на целевые запросы. 
+					.banners 
+						.banners__task 
+							.task__img 
+								img.wow.pulse(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/331933/content_group_1000002108.png", alt="")
+							.task__block.wow.bounceInRight( data-wow-delay="0.5s")
+								p.block__title.section_h4 Решает задачи: 
+								.list
+									.list__li Быстрое привлечение новых клиентов с поиска Яндекса;
+									.list__li Перехват заявок, которые могут уйти к конкурентам;
+									.list__li Увеличение продаж группы товаров.
+					.cases
+						.cases__item 
+							.item__heading.section_h3 Кейс компании «СейфКрафт
+							.item__subtitle г. Краснодар #[br] Производство бронированных конструкций: дверей, окон, стекол.
+							.item__info 
+								.info__title.section_h4 За 1 месяц:
+								.info__result #[span.info__result_accent +698 ] показов объявлений на поиске Яндекса по ЮФО
+								.info__result #[span.info__result_accent +212 ] переходов на сайт
+							//- +buttonLink('{crm_analytics:click_link(Смотреть кейсы,#cases,want_orders,МР_Турбопоиск_Кейс_Сейфкрафт)}', 'Смотреть кейсы', "section-button ", 'cases')
+							.button.item__btn.section-button(rel='seifKraft') {crm_analytics:click_link(Посмотреть кейс полностью,#casesy,want_orders,МР_Турбопоиск_Кейс_Сейфкрафт)}
+							
+								
+						.cases__item 
+							.item__heading.section_h3 Кейс компании «Старком»
+							.item__subtitle г. Санкт-Петербург #[br] Продажа бордюров и щебня.
+							.item__info 
+								.info__title.section_h4 За 2 месяца:
+								.info__result #[span.info__result_accent +67% ] посетителей сайта
+								.info__result #[span.info__result_accent +74% ] просмотров товаров
+							.button.item__btn.section-button(rel='starcom') {crm_analytics:click_link(Посмотреть кейс полностью,#casesy,want_orders,МР_Турбопоиск_Кейс_Старком)}
+
+			section.benefits
+				.content 
+					.benefits__title.section_h2 Преимущества услуги «Турбопоиск»
+					.benefits__block 
+						.block__item 
+							img.item__img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/331934/content_group_1000002092.png", alt="")
+							.item__title.section_h3 Быстрый старт
+							.item__subtitle Рекламная кампания запускается в короткие сроки
+						.block__item 
+							img.item__img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/331935/content_group_1000002090.png", alt="")
+							.item__title.section_h3 Только целевые посетители
+							.item__subtitle Ваше предложение показывается только в ответ на целевой запрос
+						.block__item 
+							img.item__img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/331936/content_group_1000002089.png", alt="")
+							.item__title.section_h3 Самые заметные места
+							.item__subtitle Гарантирована первая страница выдачи
+						.block__item 
+							img.item__img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/331937/content_group_1000002091.png", alt="")
+							.item__title.section_h3 Усиление продаж
+							.item__subtitle Рост трафика приведет к увеличению количества звонков и заявок
+			section.service
+				.content 
+					.service__title.section_h2 Что входит в услугу
+					.list 
+						.list__li Подбор поисковых запросов
+						.list__li Подготовка посадочных страниц
+						.list__li Настройка, ведение и корректировка рекламной кампании
+						.list__li Выделенный номер для отслеживания звонков
+						.list__li Аналитика и своевременная отчетность
+					.service__p.fat Получайте больше клиентов с Яндекса уже в первый месяц.
+					+button('{crm_analytics:click_link(Заказать консультацию,#casesy,want_orders,МР_Турбопоиск_Консультация)}', 'Заказать консультацию', 'section-button')
+		include ./modules/seifKraft.pug
+		include ./modules/starcom.pug
+		include ./modules/footer.pug
+	p {crm_analytics:show_page(want_orders,МР_Турбопоиск)}
