@@ -1,0 +1,253 @@
+/** @format */
+
+//как использовать - main_content{@include mainContent}
+.main_content {
+	@include mainContent(16px, rgb(255, 255, 255));
+	background: #7dc1fb;
+	position: relative;
+	font-weight: 500;
+}
+
+* {
+	scroll-behavior: smooth;
+	line-height: 1.7em;
+}
+.accentBlue {
+	background: $corporate_color;
+	padding: 2px 8px;
+	border-radius: 5px;
+}
+.accent {
+	color: #e67541;
+}
+
+.header__wrapper {
+	@include grid(2vw, 1.4fr 1fr);
+	padding: 150px 0;
+	.header__text {
+		z-index: 2;
+	}
+	.header__img {
+		display: grid;
+		justify-items: right;
+		img {
+			max-width: 100%;
+		}
+	}
+	.mobile__img {
+		display: none;
+	}
+	.offer {
+		margin-top: 30px;
+		max-width: 560px;
+		grid-gap: 36px;
+		display: grid;
+		z-index: 2;
+		margin-bottom: var(--block);
+	}
+}
+.claster_itemEnd {
+	grid-column: 1/5;
+}
+.working {
+	background: #ffffff;
+	padding: var(--section) 0;
+	color: $main_text_color;
+	.list {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	.banners {
+		margin-top: var(--section);
+		.banners__block {
+			margin-top: var(--block);
+		}
+		.block__item {
+			margin-top: 46px;
+			@include grid(16px, repeat(auto-fit, minmax(250px, 1fr)));
+			.item {
+				background: rgb(255, 255, 255);
+				border-radius: 15px;
+				padding: var(--block);
+				display: grid;
+				grid-gap: 16px;
+				box-shadow: 1px 1px 7px 1px #dad6d6;
+			}
+			.item__img {
+				display: grid;
+				justify-self: center;
+			}
+		}
+		.banners__task {
+			margin-top: var(--block);
+			@include grid(28px, repeat(auto-fit, minmax(300px, 1fr)));
+			align-items: center;
+			justify-items: right;
+			.block__title {
+			}
+			.list {
+				grid-template-columns: 1fr;
+			}
+			.task__img {
+				display: grid;
+				justify-items: self-end;
+				img {
+					max-width: 70%;
+				}
+			}
+		}
+	}
+}
+.benefit {
+	.section_h1 {
+		position: relative;
+		z-index: 2;
+	}
+	.benefit__block {
+		@include grid(var(--block), 1fr 1fr);
+		margin-top: calc(var(--section) + 20px);
+		.block__item {
+			background: #ffffff;
+			box-shadow: 0px 4px 20px rgba(13, 84, 144, 0.05);
+			border-radius: 8px;
+			padding: var(--block) calc(var(--block) - 10px);
+			padding-top: var(--section);
+			position: relative;
+			text-align: center;
+			height: 100%;
+			display: grid;
+		}
+		.item__img {
+			position: absolute;
+			top: -35px;
+			left: 50%;
+			transform: translate(-50%, 0%);
+		}
+		.item__title {
+			// height: 100%;
+			align-content: center;
+			display: inline;
+		}
+	}
+}
+.item__subtitle_modal {
+	margin-bottom: 36px;
+	max-width: 651px;
+	width: 100%;
+	text-align: left;
+	font-weight: 600;
+}
+
+.info {
+	background: #ffffff;
+	padding: var(--section) 0;
+	color: $main_text_color;
+	.info__traffic {
+		margin-top: var(--section);
+		.list {
+			margin: var(--block) 0;
+		}
+	}
+}
+
+.line {
+	margin: 0px 0 0px;
+	background: #e7eef4;
+	max-width: 100%;
+	width: 100%;
+	height: 2px;
+}
+.line-note {
+	font-weight: 700;
+	display: grid;
+	display: flex;
+	backface-visibility: hidden;
+	transform: rotateX(180deg);
+}
+
+.sectionOffer {
+	display: grid;
+	grid-gap: 16px;
+	margin: 24px 0;
+	max-width: 1024px;
+}
+
+.benefit {
+	background: #e4eff9;
+	color: $main_text_color;
+	padding: var(--section) 0;
+}
+
+@media (min-width: 1920px) {
+}
+
+@media (max-width: 1440px) {
+}
+
+@media (max-width: 1366px) {
+	.header__wrapper {
+		.header__img img {
+			max-width: 78%;
+		}
+	}
+}
+
+@media (max-width: 1024px) {
+	:root {
+		--section: 40px;
+		--block: 24px;
+	}
+	.header__wrapper {
+		display: grid;
+		grid-template-columns: 1.8fr 1fr;
+		grid-gap: 2vw;
+		padding: 60px 0;
+	}
+	.header__wrapper {
+		grid-template-columns: 1fr;
+		justify-items: center;
+		.header__text {
+			order: 2;
+		}
+		.header__img {
+			display: none;
+			justify-items: center;
+
+			img {
+				max-width: 40%;
+			}
+		}
+		.mobile__img {
+			display: block;
+			max-width: 43%;
+			margin: auto;
+		}
+	}
+	.offer {
+		display: grid;
+		max-width: 100%;
+	}
+}
+
+@media (max-width: 800px) {
+	.working {
+		.banners {
+			.banners__task {
+				.task__img img {
+					margin: auto;
+					display: grid;
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 660px) {
+	.benefit .benefit__block {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-gap: 60px;
+	}
+}
+@media (max-width: 480px) {
+}

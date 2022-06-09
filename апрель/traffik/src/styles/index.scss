@@ -216,7 +216,10 @@ header {
 	}
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1380px) {
+	.sectionWrapper .sectionWrapper__block {
+		grid-gap: 5.4vw;
+	}
 }
 
 @media (max-width: 660px) {

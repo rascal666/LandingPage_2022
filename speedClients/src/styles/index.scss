@@ -308,7 +308,7 @@ header {
 			}
 			.info__number {
 				display: grid;
-				grid-gap: 16px;
+				grid-gap: 24px;
 			}
 		}
 		.result__traffic {
@@ -394,11 +394,11 @@ header {
 		padding: 24px 18px;
 		.blockBlueSmall__grid {
 			display: grid;
-			grid-template-rows: 0.15fr 1fr;
+			grid-template-rows: 0.0001fr 1fr;
 			align-items: self-end;
 			grid-gap: 16px;
 			img {
-				max-width: 200px;
+				max-width: 167px;
 			}
 		}
 	}
@@ -409,6 +409,25 @@ header {
 }
 .vrednostiTop {
 	margin-top: 24px;
+}
+
+.hint {
+	position: relative;
+	cursor: pointer;
+}
+
+.hint:hover::after {
+	content: attr(data-hint);
+	position: absolute;
+	right: 0;
+	top: 30px;
+	background: white;
+	padding: 8px 16px;
+	max-width: 361px;
+	width: 100%;
+	border-radius: 5px;
+	cursor: pointer;
+	box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 @media (min-width: 1920px) {
@@ -514,6 +533,12 @@ header {
 	.grandStroy .modal__task,
 	.grandStroy .modal__result {
 		padding: var(--block) 20px;
+	}
+	.seifKraft .modal__solution .solution__block {
+		grid-auto-flow: row;
+	}
+	.seifKraft .modal__result .result__info .info__block {
+		grid-auto-flow: row;
 	}
 }
 @media (max-width: 480px) {
