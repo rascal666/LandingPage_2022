@@ -1,0 +1,82 @@
+<!-- @format -->
+include ./miksins.pug
+
+
+html(lang="ru")
+	head
+		meta(charset="utf-8")
+		<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/>
+		title= "Больше клиентов из других городов"
+	body.js-body
+		.main_content
+			header
+				include ./modules/toolbar.pug
+				.header
+					.content
+						.header__wrapper
+							.header__text
+								.header__heading.section_h1 Клиенты из крупных регионов или со всей России
+
+								.offer
+									img.mobile__img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/331364/content_group_1000002104.png")
+									p #[span.accentBlue.fat скидка до 25%] на расширение рынка сбыта компаниям, которые впервые подключат платное размещение до 30 июня.
+
+								+buttonLink('{crm_analytics:click_link(Подробнее,#working,network_actions,НК_День_России_Подробности_080622)}', 'Подробнее', "section-button ", 'working')
+							.header__img
+								img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/331364/content_group_1000002104.png")
+				section.working#working
+					.content 
+						.working__title.section_h2 Что даёт запуск продаж в других городах с Пульсом цен:
+						.banners 
+							.banners__task 
+								
+								.task__block.wow.bounceInRight( data-wow-delay="0.5s")
+									//- p.block__title.section_h3 Преимущества тарифа «Вся Россия»: 
+									.list
+										.list__li возможность быстро протестировать спрос на любом рынке;
+										.list__li быстрый запуск продаж в регионе или по всей России;
+										.list__li увеличение лимита товаров до 10 000; 
+										.list__li готовый сайт с модулями доставки и онлайн-оплаты;
+										.list__li профессиональный SSL-сертификат безопасности для сайта (обязателен для всех с 01.01.2022);
+										.list__li доступ к базе готовых заявок «Закупки»;
+										.list__li повышение узнаваемости компании и доверия клиентов.
+								.task__img 
+									img.wow.pulse(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/331365/content_group_1000002125.png", alt="")
+				section.benefit#benefit
+					.content 
+						p.section_h2 Для расширения географии продаж на ваш выбор:
+
+						.benefit__block 
+							//- .block__item
+							//- 	img.item__img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/332320/content_galochka.png", alt="")
+							//- 	.item__title.section_h3 -25% на любой город России
+								
+							.block__item
+								img.item__img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/332320/content_galochka.png", alt="")
+								.item__title.section_h3 Скидка до 25% на любой #[span.accent.button(rel='regions2') региональный кластер ] 
+								
+								.modal-wrapper
+									.modal-wrapper-block(data-popup='regions2')
+										.modal-block
+											img.modal-close(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195450/content_union_3.png' alt='')
+											.item__subtitle_modal Региональный кластер - объединение городов, сформированное по географической/логистической доступности. На ваш выбор 14 кластеров:
+											.claster__city.regions2
+
+							.block__item
+								img.item__img(src="https://www.pulscen.ru/system/ckeditor_assets/pictures/332320/content_galochka.png", alt="")
+								.item__title.section_h3 Скидка до 25% на размещение в  #[span.accent.button(rel='popupAll')  214 городах ]  России, включая все миллионники
+								
+								.modal-wrapper
+									.modal-wrapper-block(data-popup='popupAll')
+										.modal-block
+											img.modal-close(src='https://www.pulscen.ru/system/ckeditor_assets/pictures/195450/content_union_3.png' alt='')
+											.item__subtitle_modal 214 городов по всей стране:
+											.claster__city.All
+						
+				section.info 
+					.content 
+						.sectionOffer
+							p Закажите бесплатную консультацию и специалист по расширению рынка сбыта расскажет все подробности и ответит на все вопросы.
+							+button('{crm_analytics:click_link(Хочу бесплатную консультацию,#order,network_actions,НК_День_России_Консультация_080622)}', 'Хочу бесплатную консультацию', "section-button")
+		include ./modules/footer.pug
+	p {crm_analytics:show_page(network_actions,НК_День_России_080622)}
